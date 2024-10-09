@@ -1,9 +1,16 @@
+import SidebarMenu from "./components/layout_components/SidebarMenu";
 import ProductComponent from "./components/ProductComponent";
 
 const Main = () => {
     return (
         <>
-            <ProductComponent />
+            <main>
+                <div>
+                    <SidebarMenu />
+                </div>
+                
+                <ProductComponent />
+            </main>
         </>
     )
 }
