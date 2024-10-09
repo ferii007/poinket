@@ -1,13 +1,105 @@
+:root {
+  --primary-color: lightblue;
+}
+
+
+/* Full CSS Reset */
+
+/* Universal Selector */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML and Body */
+html {
+    line-height: 1.15; /* Improve readability */
+    -webkit-text-size-adjust: 100%; /* Prevent text size adjustment */
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    text-rendering: optimizeSpeed; /* Improve rendering speed */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Paragraphs */
+p {
+    margin: 0;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Lists */
+ul,
+ol {
+    list-style: none;
+    padding-left: 0; /* Remove default padding */
+}
+
+/* Links */
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Images */
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom spacing */
+}
+
+/* Buttons */
+button {
+    border: none; /* Remove default border */
+    background: none; /* Remove default background */
+    cursor: pointer; /* Show pointer cursor */
+}
+
+/* Input and Textarea */
+input,
+textarea,
+select {
+    font-family: inherit; /* Inherit font from body */
+    font-size: inherit; /* Inherit font size */
+    line-height: inherit; /* Inherit line height */
+}
+
+/* Form Elements */
+button,
+input {
+    overflow: visible; /* Improve accessibility */
+}
+
+/* Table Elements */
+table {
+    border-collapse: collapse; /* Merge borders */
+    border-spacing: 0; /* Remove spacing */
+}
+
+/* Miscellaneous */
+blockquote {
+    margin: 0; /* Remove default margin */
+    quotes: none; /* Remove default quotes */
+}
+
+q {
+    quotes: none; /* Remove default quotes */
+}
+
+cite {
+    font-style: normal; /* Remove italic styling */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: monospace; /* Set font for code */
 }
