@@ -1,6 +1,8 @@
+import Main from "./app/Main"
+
 const App = () => {
   return(
-    <h1>Hello, Poinket!</h1>
+    <Main></Main>
   )
 }
 
