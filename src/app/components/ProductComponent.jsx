@@ -1,11 +1,24 @@
-import moment from 'moment-timezone';
 
-const currentDate = moment.tz("Asia/Jayapura").format('YYYY-MM-DD HH:mm:ss');
+import momentTimezone from 'moment-timezone';
+import moment from 'moment';
+import '../tweaks/momentLocale';
+import { useEffect, useState } from 'react';
 
 const ProductComponent = () => {
+    const [formattedTime, setFormattedTime] = useState('');
+
+    useEffect(() => {
+        moment.locale('id');
+
+        const timeZone = momentTimezone.tz("Asia/Jayapura").format('yy-M-DD HH:mm');
+        const time = moment(timeZone).format('dddd, D MMM YYYY - HH:mm');
+
+        setFormattedTime(time)
+    }, [])
+
     return(
         <>
-            <h1>Hello World {currentDate}</h1>
+            <h1>Hello World {formattedTime}</h1>
         </>
     )
 }
