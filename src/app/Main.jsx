@@ -9,7 +9,7 @@ const Main = () => {
                     <SidebarMenu />
                 </div>
                 
-                <ProductComponent />
+                {/* <ProductComponent /> */}
             </main>
         </>
     )

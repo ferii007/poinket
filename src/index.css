@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
-  --primary-color: lightblue;
-  --font-nunito: Nunito, Arial, sans-serif;
+    --primary-color: #74B49B;
+    --secondary-color: #5C8D89;
+    --third-color: #F2F2F2;
+    
+    --font-nunito: Nunito, Arial, sans-serif;
 }
 
 
@@ -27,6 +30,7 @@ body {
     height: 100%;
     text-rendering: optimizeSpeed; /* Improve rendering speed */
     font-family: Arial, sans-serif; /* Set a default font */
+    background-color: var(--third-color);
 }
 
 /* Headings */
