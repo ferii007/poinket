@@ -5,21 +5,29 @@ import {
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/ProductionQuantityLimitsOutlined';
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
+
 import { useState } from "react";
 
 const SidebarMenu = () => {
-    const [activeMenu, setActiveMenu] = useState('home');
+    const [activeMenu, setActiveMenu] = useState('products');
 
     const menu = [
         {
-            icon: <HomeOutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: 'Home',
-            active: 'home',
+            icon: <ProductionQuantityLimitsOutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: 'Products',
+            active: 'products',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: 'Bills',
+            active: 'bills',
         },
         {
             icon: <SettingsOutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: 'Setting',
-            active: 'setting',
+            name: 'Settings',
+            active: 'settings',
         }
     ];
 
@@ -43,7 +51,7 @@ const SidebarMenu = () => {
                         >
                             {item.icon}
 
-                            <span>{item.name}</span>
+                            <span style={{ display: 'block' }}>{item.name}</span>
                         </li>
                     ))}
                 </SidebarMenuList>
