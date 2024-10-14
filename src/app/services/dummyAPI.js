@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const dataOutlet = async (onSuccess, onError) => {
+const dataOutlet = async (onSuccess, onError, onFinally) => {
     try {
         const response = await axios.get('/dummyAPI/dataOutletAPI.json');
         if (onSuccess) {
@@ -9,6 +9,10 @@ const dataOutlet = async (onSuccess, onError) => {
     } catch (error) {
         if (onError) {
             onError(error);
+        }
+    } finally {
+        if (onFinally) {
+            onFinally();
         }
     }
 };

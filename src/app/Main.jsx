@@ -35,6 +35,9 @@ const Main = () => {
             },
             (onError) => {
               console.error('Failed to fetch data:', onError);
+            },
+            (onFinally) => {
+                console.log('hello world test')
             }
         );
 
