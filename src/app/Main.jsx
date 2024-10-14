@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import ProductComponent from "./components/ProductComponent";
 import ContentLoaderAnimation from "./components/layout_components/ContentLoaderAnimation";
 
-import {
-    dataOutlet
-} from "./services/dummyAPI";
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from './../state';
+
+import axios from 'axios';
 
 import {
     HeaderMenu,
@@ -13,6 +15,9 @@ import {
 
 
 const Main = () => {
+    const dispatch = useDispatch();
+    const { dataOutlet } = bindActionCreators(actionCreators, dispatch);
+
     const [isContentLoaded, setIsContentLoaded] = useState(true);
     
     const contentStyle = {
@@ -33,28 +38,25 @@ const Main = () => {
     }
 
     const handleDataOutlet = async () => {
-        const data = await dataOutlet(
-            (onSuccess) => {
-              console.log('Success! Data fetched:', onSuccess);
-            },
-            (onError) => {
-              console.error('Failed to fetch data:', onError);
-            },
-            (onFinally) => {
-                console.log('hello world test')
-            }
-        );
+        try {
+            const response = await axios.get('/dummyAPI/dataOutletAPI.json');
 
-        return data;
-    };
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
 
     useEffect(() => {
         const fetchData = async () => {
-            await handleDataOutlet();
-            
-            console.log('hello world');
-
-            // setIsContentLoaded(true);
+            try {
+                const outlets = await handleDataOutlet();
+                
+                dataOutlet(outlets);
+                
+            } catch (error) {
+                console.log('error', error);
+            }
         };
         
         fetchData();
