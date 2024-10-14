@@ -3,7 +3,6 @@ import {
     SidebarMenuList
 } from "./../../styledComponents/SidebarMenuStyled";
 
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/ProductionQuantityLimitsOutlined';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
