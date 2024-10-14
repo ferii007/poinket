@@ -4,7 +4,7 @@ const initialState = {
     "outlet_name": "Poinket",
     "owner_id": 1,
     "outlet_time_zone": "Asia/Jakarta",
-    "outlet_start_time": "08:00",
+    "outlet_line_time": "...",
     "outlet_location": "Indonesian",
     "outlet_location_code": "id"
 }

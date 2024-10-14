@@ -4,7 +4,7 @@
     "outlet_name": "Sunshine Café",
     "owner_id": 101,
     "outlet_time_zone": "Asia/Jakarta",
-    "outlet_start_time": "08:00",
+    "outlet_line_time": "08:00",
     "outlet_location": "Indonesian",
     "outlet_location_code": "id"
 }

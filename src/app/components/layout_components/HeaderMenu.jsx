@@ -42,13 +42,11 @@ const HeaderMenu = () => {
                 </h1>
 
                 <h4 className="header-outlet-time">
-                    <span>00:00</span>
-                    <span> | Line time</span>
+                    <span>{dataOutlet.outlet_line_time} | Line time</span>
                 </h4>
 
                 <h4 className="header-outlet-time">
-                    <span>{formattedTime}</span>
-                    <span> | Local time</span>
+                    <span>{formattedTime} | Local time</span>
                 </h4>
             </HeaderMenuContainer>
         </>
