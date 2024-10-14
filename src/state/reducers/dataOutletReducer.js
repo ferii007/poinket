@@ -5,8 +5,8 @@ const initialState = {
     "owner_id": 1,
     "outlet_time_zone": "Asia/Jakarta",
     "outlet_start_time": "08:00",
-    "outlet_language": "Indonesian",
-    "outlet_language_code": "id"
+    "outlet_location": "Indonesian",
+    "outlet_location_code": "id"
 }
 
 const dataOutletReducer = (state = initialState, action) => {

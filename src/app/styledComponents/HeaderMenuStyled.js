@@ -15,13 +15,14 @@ const HeaderMenuContainer = styled.div`
     .header-outlet-name {
         font-size: 1.3rem;
         font-weight: 600;
+        margin-bottom: 1rem;
     }
 
     .header-outlet-time {
         font-size: 0.8rem;
         font-weight: 600;
         color: rgba(0, 0, 0, 0.5);
-        margin-top: 1rem;
+        margin-bottom: 0.2rem;
     }
     
 
