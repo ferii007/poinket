@@ -1,6 +1,6 @@
 import Lottie from 'react-lottie';
 import contentLoaderAnimationData from "./../../src/lotties/content-loader-animation.json";
-import { LoaderAnimationContainer } from '../../styledComponents/globalStyled';
+import { LoaderAnimationContainer } from '../../styled_components/globalStyled';
 
 const ContentLoaderAnimation = () => {
 

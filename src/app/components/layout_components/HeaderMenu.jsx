@@ -1,6 +1,6 @@
 import {
     HeaderMenuContainer
-} from "./../../styledComponents/HeaderMenuStyled";
+} from "./../../styled_components/HeaderMenuStyled";
 
 import { useEffect, useState } from "react";
 import { useSelector } from 'react-redux';

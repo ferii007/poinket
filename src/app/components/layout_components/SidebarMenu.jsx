@@ -1,7 +1,7 @@
 import { 
     SidebarMenuContainer,
     SidebarMenuList
-} from "./../../styledComponents/SidebarMenuStyled";
+} from "./../../styled_components/SidebarMenuStyled";
 
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/ProductionQuantityLimitsOutlined';
