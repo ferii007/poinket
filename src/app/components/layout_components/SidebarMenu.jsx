@@ -14,7 +14,7 @@ const SidebarMenu = () => {
     const [activeMenu, setActiveMenu] = useState('products');
     const [isSettingsModalVisible, setIsSettingsModalisVisible] = useState(false);
 
-    const toggleModal = () => setIsSettingsModalisVisible(!isSettingsModalVisible);
+    const toggleSettingsModal = () => setIsSettingsModalisVisible(!isSettingsModalVisible);
 
     const menu = [
         {
@@ -40,7 +40,7 @@ const SidebarMenu = () => {
         }
 
         if (currentActive === 'settings') {
-            toggleModal();
+            toggleSettingsModal();
 
             return;
         }
@@ -67,7 +67,7 @@ const SidebarMenu = () => {
             </SidebarMenuContainer>
 
             <SettingsModal
-                isVisible={isSettingsModalVisible} onClose={toggleModal}
+                isVisible={isSettingsModalVisible} toggleSettingsModal={toggleSettingsModal}
             />
         </>
     )

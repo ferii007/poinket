@@ -17,7 +17,9 @@ const LoaderAnimationContainer = styled.div`
     padding-top: 3rem;
 `;
 
-const ModalBackdrop = styled.div`
+const ModalBackdrop = styled.div.attrs(({ onClose }) => ({
+    onClick: onClose,
+}))`
     position: fixed;
     background-color: rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -26,7 +28,9 @@ const ModalBackdrop = styled.div`
     overflow: scroll;
 `;
 
-const ModalContainer = styled.div`
+const ModalContainer = styled.div.attrs(() => ({
+    onClick: (e) => e.stopPropagation(),
+}))`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,7 +38,7 @@ const ModalContainer = styled.div`
     padding: 2rem 0;
     width: 90%;
     max-width: 720px;
-`
+`;
 
 const ModalBox = styled.div`
     background-color: white;
