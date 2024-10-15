@@ -8,9 +8,13 @@ import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/Production
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 
 import { useState } from "react";
+import SettingsModal from "../modals/SettingsModal";
 
 const SidebarMenu = () => {
     const [activeMenu, setActiveMenu] = useState('products');
+    const [isSettingsModalVisible, setIsSettingsModalisVisible] = useState(false);
+
+    const toggleModal = () => setIsSettingsModalisVisible(!isSettingsModalVisible);
 
     const menu = [
         {
@@ -35,6 +39,12 @@ const SidebarMenu = () => {
             return;
         }
 
+        if (currentActive === 'settings') {
+            toggleModal();
+
+            return;
+        }
+
         setActiveMenu(currentActive);
     }
 
@@ -55,6 +65,10 @@ const SidebarMenu = () => {
                     ))}
                 </SidebarMenuList>
             </SidebarMenuContainer>
+
+            <SettingsModal
+                isVisible={isSettingsModalVisible} onClose={toggleModal}
+            />
         </>
     )
 }

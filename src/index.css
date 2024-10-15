@@ -33,6 +33,7 @@ body {
     text-rendering: optimizeSpeed; /* Improve rendering speed */
     background-color: var(--third-color);
     font-family: var(--font-poppins);
+    position: relative;
 }
 
 /* Headings */
