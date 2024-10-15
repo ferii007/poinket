@@ -23,33 +23,53 @@ const ModalBackdrop = styled.div`
     z-index: 999;
     width: 100vw;
     height: 100vh;
+    overflow: scroll;
 `;
 
 const ModalContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 100%);
-    padding: 5rem 10rem;
+    transform: translate(-50%, 0%);
+    padding: 2rem 0;
+    width: 90%;
+    max-width: 720px;
+`
 
-    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
-    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
-        
-    }
+const ModalBox = styled.div`
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 0.4rem 4rem rgba(0, 0, 0, 0.1);
+`;
 
-    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
-    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-        transform: translate(-50%, 50%);
-    }
+const ModalHeader = styled.div`
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    /* Tablet Potrait */
-    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
-        
+    .icon {
+        cursor: pointer;
+        font-weight: normal;
+        font-size: 1rem;
     }
+`;
+
+const ModalBody = styled.div`
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 1rem 0;
+`;
+
+const ModalFooter = styled.div`
+    padding-top: 0.4rem;
+    margin-top: 0.4rem;
+    border-top: 1px solid red;
 `;
 
 export {
@@ -59,5 +79,9 @@ export {
     tabletResolutionMin,
     tabletResolutionMax,
     ModalBackdrop,
-    ModalContainer
+    ModalContainer,
+    ModalBox,
+    ModalHeader,
+    ModalBody,
+    ModalFooter
 }
