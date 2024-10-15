@@ -28,17 +28,27 @@ const HeaderMenuContainer = styled.div`
 
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
-        
+        top: 6.5rem;
+        left: 0.5rem;
+
+        .header-outlet-name {
+            margin-bottom: 0.8rem;
+        }
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-    
+        left: 6.5rem;
     }
 
     /* Tablet Potrait */
     @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
-        
+        top: 6.5rem;
+        left: 0.5rem;
+
+        .header-outlet-name {
+            margin-bottom: 0.8rem;
+        }
     }
 `;
 
