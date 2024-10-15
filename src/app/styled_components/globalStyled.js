@@ -20,4 +20,8 @@ const LoaderAnimationContainer = styled.div`
 
 export {
     LoaderAnimationContainer,
+    mobileResolutionPotrait,
+    mobileResolutionLandscape,
+    tabletResolutionMin,
+    tabletResolutionMax
 }
