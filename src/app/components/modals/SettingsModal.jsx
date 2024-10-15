@@ -2,9 +2,9 @@ import ReactDOM from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import {
-    SettingsModalBackdrop,
-    SettingsModalContainer
-} from './../../styled_components/modals_styled/SettingsModalStyled'
+    ModalBackdrop,
+    ModalContainer
+} from './../../styled_components/globalStyled';
 
 const SettingsModal = ({ isVisible, onClose }) => {
     const modalVariants = {
@@ -25,7 +25,7 @@ const SettingsModal = ({ isVisible, onClose }) => {
         <>
                 <AnimatePresence>
                     {isVisible && (
-                    <SettingsModalBackdrop>
+                    <ModalBackdrop>
                         <motion.div
                             variants={modalVariants}
                             initial="initial"
@@ -33,11 +33,11 @@ const SettingsModal = ({ isVisible, onClose }) => {
                             exit="exit"
                             onClick={onClose}
                         >
-                            <SettingsModalContainer>
+                            <ModalContainer>
                                 
-                            </SettingsModalContainer>
+                            </ModalContainer>
                         </motion.div>
-                    </SettingsModalBackdrop>
+                    </ModalBackdrop>
                     )}
                 </AnimatePresence>
         </>,
