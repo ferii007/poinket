@@ -8,6 +8,7 @@
     "outlet_location": "Indonesian",
     "outlet_location_code": "id",
     "outlet_address": "Jalan Raya No. 123, Jakarta",
+    "outlet_icon": "images.jpeg",
     "staff_id": 1,
     "staff_name": "John Doe"
 }
