@@ -6,7 +6,9 @@ const initialState = {
     "outlet_time_zone": "Asia/Jakarta",
     "outlet_line_time": "00:00",
     "outlet_location": "Indonesian",
-    "outlet_location_code": "id"
+    "outlet_location_code": "id",
+    "outlet_address": "...",
+    "staff_name": "..."
 }
 
 const dataLoginReducer = (state = initialState, action) => {

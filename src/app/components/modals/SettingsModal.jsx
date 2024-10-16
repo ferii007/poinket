@@ -25,7 +25,7 @@ import {
     SettingsFormGroup,
     SettingsInfoContainer
  } from '../../styled_components/modals_styled/SettingsModalStyled';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
     const modalVariants = {
@@ -60,6 +60,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
     ]
 
     const dataLogin = useSelector((state) => state.dataLogin);
+    const dataFromLocalStorage = useSelector((state) => state.dataFromLocalStorage);
 
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [highlightedLang, setHighlightedLang] = useState(null);
@@ -68,7 +69,6 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
     const toggleDropdown = () => setIsLangOpen(!isLangOpen);
 
     const handleItemClick = (langName, langCode) => {
-        console.log(`${langName} - ${langCode} clicked`);
         setIsLangOpen(false);
         setHighlightedLang(langName);
         setHighlightedLangCode(langCode);
@@ -79,17 +79,46 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
             if (highlightedLang === null || highlightedLangCode === null) {
                 throw new Error('Please choose language');
             }
+            
+            const language = saveLanguage(highlightedLang, highlightedLangCode);
 
-            const language = {
-                name: highlightedLang,
-                lang_code: highlightedLangCode
-            };
-
-            localStorage.setItem('language', JSON.stringify(language));  
+            localStorage.setItem('language', JSON.stringify(language));
         } catch (error) {
             console.log('error', error);
         }
     }
+
+    const saveLanguage = (name, lang_name) => {
+        const language = {
+            name: name,
+            lang_code: lang_name
+        };
+
+        const languageData = dataFromLocalStorage.languageData
+        languageData.name = name;
+        languageData.lang_code = lang_name;
+
+        return language;
+    }
+    
+    const resetSettingsForm = () => {
+        const languageData = dataFromLocalStorage.languageData;
+
+        setHighlightedLang(languageData.name);
+        setHighlightedLangCode(languageData.lang_code);
+        setIsLangOpen(false);
+    }
+
+    useEffect(() => {
+        resetSettingsForm();
+    }, [dataFromLocalStorage])
+
+    useEffect(() => {
+        
+        if (isVisible === false) {
+            resetSettingsForm();
+        }
+    }, [isVisible])
 
     return ReactDOM.createPortal(
         <>
@@ -146,7 +175,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
 
                                                 <DropdownContainer>
                                                     <DropdownButton onClick={toggleDropdown} className={ isLangOpen ? 'dropdown-active' : '' }>
-                                                        Select Language
+                                                        {highlightedLang}
                                                     </DropdownButton>
 
                                                     <AnimatePresence>

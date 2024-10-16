@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import { actionCreators } from './../state';
 
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 import {
     HeaderMenu,
@@ -16,7 +17,10 @@ import {
 
 const Main = () => {
     const dispatch = useDispatch();
-    const { dataLogin } = bindActionCreators(actionCreators, dispatch);
+    const {
+        dataLogin,
+        dataFromLocalStorage
+    } = bindActionCreators(actionCreators, dispatch);
 
     const [isContentLoaded, setIsContentLoaded] = useState(true);
     
@@ -47,15 +51,38 @@ const Main = () => {
         }
     }
 
+    const handleDataFromLocalStorage = async () => {
+        try {
+            const storedLanguage = localStorage.getItem('language');
+            const defaultLanguage = { name: 'English', lang_code: 'en' };
+            const languageData = storedLanguage ? JSON.parse(storedLanguage) : defaultLanguage;
+
+            const dataLocalStorage = {
+                languageData: languageData
+            }
+
+            return dataLocalStorage;
+        } catch (error) {
+            throw error;
+        }
+    }
+
     useEffect(() => {
         const initData = async () => {
             try {
+                const dataLocalStorage = await handleDataFromLocalStorage();
+                dataFromLocalStorage(dataLocalStorage);
+
                 const data = await handleDataLogin();
-                
                 dataLogin(data);
-                
             } catch (error) {
                 console.log('error', error);
+
+                Swal.fire({
+                    title: "Error!",
+                    text: "Failed to initialize data!",
+                    icon: "error"
+                });
             }
         };
         
