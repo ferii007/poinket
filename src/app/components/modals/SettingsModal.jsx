@@ -7,6 +7,11 @@ import ChangeCircleOutlinedIcon from '@mui/icons-material/ChangeCircleOutlined';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import {
+    modalVariants,
+    dropdownVariants
+} from './../../tweaks/framerMotionVariants'
+
+import {
     DefaultButton,
     ModalBackdrop,
     ModalContainer,
@@ -25,28 +30,11 @@ import {
     SettingsFormGroup,
     SettingsInfoContainer
  } from '../../styled_components/modals_styled/SettingsModalStyled';
+
 import { useEffect, useState } from 'react';
 
 const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
-    const modalVariants = {
-        initial: { opacity: 0, y: -50 },
-        animate: {
-            opacity: 1,
-            y: 0,
-            transition: { ease: "easeOut", duration: 0.15 },
-        },
-        exit: {
-            opacity: 0,
-            y: -50,
-            transition: { ease: "easeIn", duration: 0.15 },
-        },
-    };
-
-    const dropdownVariants = {
-        hidden: { opacity: 0, y: -20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-        exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
-    };
+    
 
     const languages = [
         {
