@@ -102,6 +102,22 @@ const SettingsInfoContainer = styled.div`
     }
 `;
 
+const SettingsFormContainer = styled.div`
+    // padding: 1rem 0;
+`;
+
+const SettingsFormGroup = styled.div`
+    padding-top: 1rem;
+    
+    .setting-form-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+`;
+
 export {
-    SettingsInfoContainer
+    SettingsInfoContainer,
+    SettingsFormContainer,
+    SettingsFormGroup
 }

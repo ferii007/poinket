@@ -6,13 +6,27 @@ const tabletResolutionMin = `765px`;
 const tabletResolutionMax = `1024px`;
 
 
+const DefaultButton = styled.button`
+    color: #FFF;
+    background-color: var(--primary-color);
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover, &.dropdown-active {
+        background-color: var(--secondary-color);
+        color: #FFF;
+    }
+`;
+
 const LoaderAnimationContainer = styled.div`
     position: fixed;
     inset: 0;
     width: 100vw;
     height: 100vh;
     background-color: var(--third-color);
-    // background-color: rgba(0, 0, 0, 1);
     display: inline-block;
     padding-top: 3rem;
 `;
@@ -52,7 +66,7 @@ const ModalHeader = styled.div`
     font-weight: 600;
     padding-bottom: 0.4rem;
     margin-bottom: 0.4rem;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid var(--secondary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,10 +87,68 @@ const ModalBody = styled.div`
 const ModalFooter = styled.div`
     padding-top: 0.4rem;
     margin-top: 0.4rem;
-    border-top: 1px solid red;
+    border-top: 1px solid var(--secondary-color);
+    display: flex;
+    gap: 1rem;
+
+    &[position="right"] {
+        justify-content: flex-end;
+    }
+
+    &[position="center"] {
+        justify-content: center;
+    }
+`;
+
+const DropdownContainer = styled.div`
+    position: relative;
+    display: inline-block;
+`;
+
+const DropdownButton = styled.button`
+    background-color: #FFF;
+    padding: 0.4rem 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover, &.dropdown-active {
+        background-color: var(--primary-color);
+        color: #FFF;
+        border-color: var(--secondary-color);
+    }
+`;
+
+const DropdownMenu = styled.div`
+    position: absolute;
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
+    min-width: 160px;
+    z-index: 1;
+    margin-top: 0.5rem;
+`;
+
+const DropdownItem = styled.div`
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    background-color: #FFF;
+    font-family: var(--font-nunito);
+    font-weight: 600;
+
+    &.highlighted {
+        background-color: var(--primary-color);
+        color: #FFF;
+    }
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: #FFF;
+    }
 `;
 
 export {
+    DefaultButton,
     LoaderAnimationContainer,
     mobileResolutionPotrait,
     mobileResolutionLandscape,
@@ -87,5 +159,9 @@ export {
     ModalBox,
     ModalHeader,
     ModalBody,
-    ModalFooter
+    ModalFooter,
+    DropdownContainer,
+    DropdownButton,
+    DropdownMenu,
+    DropdownItem
 }
