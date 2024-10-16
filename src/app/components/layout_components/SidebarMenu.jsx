@@ -1,3 +1,5 @@
+import useTranslationHook from './../../tweaks/locales/index';
+
 import { 
     SidebarMenuContainer,
     SidebarMenuList
@@ -11,6 +13,7 @@ import { useState } from "react";
 import SettingsModal from "../modals/SettingsModal";
 
 const SidebarMenu = () => {
+    const { translations } = useTranslationHook();
     const [activeMenu, setActiveMenu] = useState('products');
     const [isSettingsModalVisible, setIsSettingsModalisVisible] = useState(false);
 
@@ -19,17 +22,17 @@ const SidebarMenu = () => {
     const menu = [
         {
             icon: <ProductionQuantityLimitsOutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: 'Products',
+            name: translations.products,
             active: 'products',
         },
         {
             icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: 'Bills',
+            name: translations.bills,
             active: 'bills',
         },
         {
             icon: <SettingsOutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: 'Settings',
+            name: translations.settings,
             active: 'settings',
         }
     ];
