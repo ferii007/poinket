@@ -11,8 +11,6 @@ const useTranslationHook = () => {
     const currentLanguage = i18n.language;
     const translations = language(currentLanguage);
 
-    console.log('currentLanguage', currentLanguage)
-
     return { changeLanguage, translations };
 };
 
