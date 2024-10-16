@@ -29,11 +29,6 @@ const SidebarMenu = () => {
             icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
             name: translations.bills,
             active: 'bills',
-        },
-        {
-            icon: <SettingsOutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.settings,
-            active: 'settings',
         }
     ];
 
@@ -66,6 +61,26 @@ const SidebarMenu = () => {
                             <span style={{ display: 'block' }}>{item.name}</span>
                         </li>
                     ))}
+                </SidebarMenuList>
+
+                <SidebarMenuList>
+                        <li 
+                            className={`menu-list`} 
+                            onClick={() => handleChangeActiveMenu('settings')}
+                        >
+                            <SettingsOutlinedIcon style={{ fontSize: '1.8rem' }} />
+
+                            <span style={{ display: 'block' }}>Settings</span>
+                        </li>
+
+                        <li 
+                            className={`menu-list checkout-menu`} 
+                            onClick={() => handleChangeActiveMenu('test')}
+                        >
+                            <ProductionQuantityLimitsOutlinedIcon style={{ fontSize: '1.8rem' }} />
+
+                            <span style={{ display: 'block' }}>Checkout</span>
+                        </li>
                 </SidebarMenuList>
             </SidebarMenuContainer>
 
