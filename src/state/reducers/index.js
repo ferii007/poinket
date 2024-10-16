@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 
-import dataOutletReducer from "./dataOutletReducer";
+import dataLoginReducer from "./dataLoginReducer";
 
 
 const reducers = combineReducers({
-    dataOutlet: dataOutletReducer
+    dataLogin: dataLoginReducer
 })
 
 export default reducers

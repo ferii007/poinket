@@ -16,7 +16,7 @@ import {
 
 const Main = () => {
     const dispatch = useDispatch();
-    const { dataOutlet } = bindActionCreators(actionCreators, dispatch);
+    const { dataLogin } = bindActionCreators(actionCreators, dispatch);
 
     const [isContentLoaded, setIsContentLoaded] = useState(true);
     
@@ -37,9 +37,9 @@ const Main = () => {
         },
     }
 
-    const handleDataOutlet = async () => {
+    const handleDataLogin = async () => {
         try {
-            const response = await axios.get('/dummyAPI/dataOutletAPI.json');
+            const response = await axios.get('/dummyAPI/dataLoginAPI.json');
 
             return response.data;
         } catch (error) {
@@ -50,9 +50,9 @@ const Main = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const outlets = await handleDataOutlet();
+                const data = await handleDataLogin();
                 
-                dataOutlet(outlets);
+                dataLogin(data);
                 
             } catch (error) {
                 console.log('error', error);

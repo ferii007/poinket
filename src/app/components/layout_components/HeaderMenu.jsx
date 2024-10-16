@@ -10,17 +10,17 @@ import moment from 'moment';
 import './../../tweaks/momentLocale';
 
 const HeaderMenu = () => {
-    const dataOutlet = useSelector((state) => state.dataOutlet);
+    const dataLogin = useSelector((state) => state.dataLogin);
 
     const [formattedTime, setFormattedTime] = useState('...');
 
     useEffect(() => {
-        console.log('dataOutlet', dataOutlet);
+        console.log('dataLogin', dataLogin);
 
-        moment.locale(dataOutlet.outlet_location_code);
+        moment.locale(dataLogin.outlet_location_code);
 
         const updateTime = () => {
-            const timeZone = momentTimezone.tz(dataOutlet.outlet_time_zone).format('yy-M-DD HH:mm');
+            const timeZone = momentTimezone.tz(dataLogin.outlet_time_zone).format('yy-M-DD HH:mm');
             const time = moment(timeZone).format('dddd, D MMM YYYY - HH:mm');
             setFormattedTime(time);
         };
@@ -32,17 +32,17 @@ const HeaderMenu = () => {
         }, 1000);
 
         return () => clearInterval(intervalId);
-    }, [dataOutlet])
+    }, [dataLogin])
 
     return(
         <>
             <HeaderMenuContainer>
                 <h1 className="header-outlet-name">
-                    {dataOutlet.outlet_name}
+                    {dataLogin.outlet_name}
                 </h1>
 
                 <h4 className="header-outlet-time">
-                    <span>{dataOutlet.outlet_line_time} | Line time</span>
+                    <span>{dataLogin.outlet_line_time} | Line time</span>
                 </h4>
 
                 <h4 className="header-outlet-time">
