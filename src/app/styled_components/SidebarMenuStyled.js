@@ -52,7 +52,7 @@ const SidebarMenuList = styled.ul`
         font-family: var(--font-nunito);
         font-weight: 700;
         color: #FFF;
-        width: 4rem;
+        width: 5.5rem;
         padding: 0.5rem 0.2rem;
         border-radius: 0.5rem;
         cursor: pointer;
@@ -74,6 +74,10 @@ const SidebarMenuList = styled.ul`
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
         margin-top: 0;
         flex-direction: row;
+
+        .menu-list {
+            width: 5rem;
+        }
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
