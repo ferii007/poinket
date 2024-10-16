@@ -28,19 +28,6 @@ import {
 import { useState } from 'react';
 
 const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
-    const dataLogin = useSelector((state) => state.dataLogin);
-
-    const [isLangOpen, setIsLangOpen] = useState(false);
-    const [highlightedLang, setHighlightedLang] = useState(null);
-
-    const toggleDropdown = () => setIsLangOpen(!isLangOpen);
-
-    const handleItemClick = (langName, langCode) => {
-        console.log(`${langName} - ${langCode} clicked`);
-        setIsLangOpen(false);
-        setHighlightedLang(langName)
-    };
-
     const modalVariants = {
         initial: { opacity: 0, y: -50 },
         animate: {
@@ -71,6 +58,38 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
             lang_code: 'en',
         }
     ]
+
+    const dataLogin = useSelector((state) => state.dataLogin);
+
+    const [isLangOpen, setIsLangOpen] = useState(false);
+    const [highlightedLang, setHighlightedLang] = useState(null);
+    const [highlightedLangCode, setHighlightedLangCode] = useState(null);
+
+    const toggleDropdown = () => setIsLangOpen(!isLangOpen);
+
+    const handleItemClick = (langName, langCode) => {
+        console.log(`${langName} - ${langCode} clicked`);
+        setIsLangOpen(false);
+        setHighlightedLang(langName);
+        setHighlightedLangCode(langCode);
+    };
+
+    const handleSaveSettings = () => {
+        try {
+            if (highlightedLang === null || highlightedLangCode === null) {
+                throw new Error('Please choose language');
+            }
+
+            const language = {
+                name: highlightedLang,
+                lang_code: highlightedLangCode
+            };
+
+            localStorage.setItem('language', JSON.stringify(language));  
+        } catch (error) {
+            console.log('error', error);
+        }
+    }
 
     return ReactDOM.createPortal(
         <>
@@ -159,7 +178,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
                                     </ModalBody>
 
                                     <ModalFooter position="right">
-                                        <DefaultButton>
+                                        <DefaultButton onClick={() => handleSaveSettings()}>
                                             Save changes
                                         </DefaultButton>
                                     </ModalFooter>

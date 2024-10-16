@@ -48,7 +48,7 @@ const Main = () => {
     }
 
     useEffect(() => {
-        const fetchData = async () => {
+        const initData = async () => {
             try {
                 const data = await handleDataLogin();
                 
@@ -59,7 +59,7 @@ const Main = () => {
             }
         };
         
-        fetchData();
+        initData();
     }, [])
 
     return (
