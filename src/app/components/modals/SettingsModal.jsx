@@ -1,5 +1,9 @@
 import ReactDOM from 'react-dom';
 import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from './../../../state';
 
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import ChangeCircleOutlinedIcon from '@mui/icons-material/ChangeCircleOutlined';
@@ -31,24 +35,30 @@ import {
     SettingsInfoContainer
  } from '../../styled_components/modals_styled/SettingsModalStyled';
 
-import { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
+import useTranslationHook from './../../tweaks/locales';
+
+const languages = [
+    {
+        name: 'Bahasa Indonesia',
+        lang_code: 'id',
+    },
+    {
+        name: 'English',
+        lang_code: 'en',
+    }
+]
 
 const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
+    const { changeLanguage, translations } = useTranslationHook();
+    const dispatch = useDispatch();
+
+    const {
+        dataFromLocalStorage,
+    } = bindActionCreators(actionCreators, dispatch);
     
-
-    const languages = [
-        {
-            name: 'Bahasa Indonesia',
-            lang_code: 'id',
-        },
-        {
-            name: 'English',
-            lang_code: 'en',
-        }
-    ]
-
     const dataLogin = useSelector((state) => state.dataLogin);
-    const dataFromLocalStorage = useSelector((state) => state.dataFromLocalStorage);
+    const dataLocalStorage = useSelector((state) => state.dataFromLocalStorage);
 
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [highlightedLang, setHighlightedLang] = useState(null);
@@ -64,15 +74,24 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
 
     const handleSaveSettings = () => {
         try {
-            if (highlightedLang === null || highlightedLangCode === null) {
-                throw new Error('Please choose language');
-            }
-            
             const language = saveLanguage(highlightedLang, highlightedLangCode);
 
             localStorage.setItem('language', JSON.stringify(language));
+
+            const newDataLocalStorage = {
+                ...dataLocalStorage
+            }
+
+            dataFromLocalStorage(newDataLocalStorage);
+            changeLanguage(highlightedLangCode);
         } catch (error) {
             console.log('error', error);
+
+            Swal.fire({
+                title: "Error!",
+                text: translations.error_save_settings,
+                icon: "error"
+            });
         }
     }
 
@@ -82,7 +101,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
             lang_code: lang_name
         };
 
-        const languageData = dataFromLocalStorage.languageData
+        const languageData = dataLocalStorage.languageData
         languageData.name = name;
         languageData.lang_code = lang_name;
 
@@ -90,7 +109,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
     }
     
     const resetSettingsForm = () => {
-        const languageData = dataFromLocalStorage.languageData;
+        const languageData = dataLocalStorage.languageData;
 
         setHighlightedLang(languageData.name);
         setHighlightedLangCode(languageData.lang_code);
@@ -98,12 +117,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
     }
 
     useEffect(() => {
-        resetSettingsForm();
-    }, [dataFromLocalStorage])
-
-    useEffect(() => {
-        
-        if (isVisible === false) {
+        if (isVisible === true) {
             resetSettingsForm();
         }
     }, [isVisible])
@@ -124,7 +138,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
                                 <ModalBox>
                                     <ModalHeader>
                                         <span className='title'>
-                                            Settings
+                                            {translations.settings}
                                         </span>
 
                                         <span className='icon' onClick={toggleSettingsModal}>
@@ -159,7 +173,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
 
                                         <SettingsFormContainer>
                                             <SettingsFormGroup>
-                                                <p className='setting-form-label'>Language</p>
+                                                <p className='setting-form-label'>{translations.language}</p>
 
                                                 <DropdownContainer>
                                                     <DropdownButton onClick={toggleDropdown} className={ isLangOpen ? 'dropdown-active' : '' }>
@@ -196,7 +210,7 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
 
                                     <ModalFooter position="right">
                                         <DefaultButton onClick={() => handleSaveSettings()}>
-                                            Save changes
+                                            {translations.save_changes}
                                         </DefaultButton>
                                     </ModalFooter>
                                 </ModalBox>

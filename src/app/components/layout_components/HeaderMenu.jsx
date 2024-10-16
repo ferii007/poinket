@@ -8,23 +8,27 @@ import { useSelector } from 'react-redux';
 import momentTimezone from 'moment-timezone';
 import moment from 'moment';
 import './../../tweaks/momentLocale';
+import useTranslationHook from './../../tweaks/locales/index';
 
 const HeaderMenu = () => {
+    const { translations } = useTranslationHook();
     const dataLogin = useSelector((state) => state.dataLogin);
+    const dataFromLocalStorage = useSelector((state) => state.dataFromLocalStorage);
 
     const [formattedTime, setFormattedTime] = useState('...');
 
+    const updateTime = () => {
+        const timeZone = momentTimezone.tz(dataLogin.outlet_time_zone).format('yy-M-DD HH:mm');
+        const time = moment(timeZone).format('dddd, D MMM YYYY - HH:mm');
+        setFormattedTime(time);
+    };
+
     useEffect(() => {
-        console.log('dataLogin', dataLogin);
+        moment.locale(dataFromLocalStorage.languageData.lang_code);
+        updateTime();
+    }, [dataFromLocalStorage])
 
-        moment.locale(dataLogin.outlet_location_code);
-
-        const updateTime = () => {
-            const timeZone = momentTimezone.tz(dataLogin.outlet_time_zone).format('yy-M-DD HH:mm');
-            const time = moment(timeZone).format('dddd, D MMM YYYY - HH:mm');
-            setFormattedTime(time);
-        };
-
+    useEffect(() => {
         updateTime();
 
         const intervalId = setInterval(() => {
@@ -42,11 +46,11 @@ const HeaderMenu = () => {
                 </h1>
 
                 <h4 className="header-outlet-time">
-                    <span>{dataLogin.outlet_line_time} | Line time</span>
+                    <span>{dataLogin.outlet_line_time} | {translations.line_time}</span>
                 </h4>
 
                 <h4 className="header-outlet-time">
-                    <span>{formattedTime} | Local time</span>
+                    <span>{formattedTime} | {translations.local_time}</span>
                 </h4>
             </HeaderMenuContainer>
         </>
