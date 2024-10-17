@@ -46,6 +46,8 @@ const Main = () => {
         try {
             const response = await axios.get('/dummyAPI/dataLoginAPI.json');
 
+            dataLogin(response.data);
+
             return response.data;
         } catch (error) {
             throw error;
@@ -74,8 +76,7 @@ const Main = () => {
                 const dataLocalStorage = await handleDataFromLocalStorage();
                 dataFromLocalStorage(dataLocalStorage);
 
-                const data = await handleDataLogin();
-                dataLogin(data);
+                await handleDataLogin();
             } catch (error) {
                 console.log('error', error);
 
