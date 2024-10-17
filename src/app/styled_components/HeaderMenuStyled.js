@@ -10,7 +10,7 @@ import {
 
 const HeaderMenuContainer = styled.div`
     position: fixed;
-    left: 8rem;
+    left: 7.5rem;
     top: 1rem;
 
     .header-outlet-name {
@@ -39,7 +39,7 @@ const HeaderMenuContainer = styled.div`
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-        left: 7.5rem;
+        
     }
 
     /* Tablet Potrait */
