@@ -197,6 +197,11 @@ const MainBox = styled.div`
     }
 `;
 
+const MainElement = styled.div`
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+`;
+
 export {
     DefaultButton,
     LoaderAnimationContainer,
@@ -215,5 +220,6 @@ export {
     DropdownMenu,
     DropdownItem,
     MainContainer,
-    MainBox
+    MainBox,
+    MainElement
 }

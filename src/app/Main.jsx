@@ -13,7 +13,7 @@ import {
     HeaderMenu,
     SidebarMenu
 } from "./components/layout_components/index";
-import { MainBox, MainContainer } from "./styled_components/globalStyled";
+import { MainBox, MainContainer, MainElement } from "./styled_components/globalStyled";
 
 
 const Main = () => {
@@ -113,7 +113,15 @@ const Main = () => {
 
                 <MainContainer>
                     <MainBox>
+                        <MainElement>
+                            <div className="grid-1">
+                                <h1>Grid 1</h1>
+                            </div>
 
+                            <div className="grid-2">
+                                <h1>Grid 2</h1>
+                            </div>
+                        </MainElement>
                     </MainBox>
                 </MainContainer>
 
