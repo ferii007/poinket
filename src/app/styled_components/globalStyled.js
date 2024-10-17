@@ -206,13 +206,70 @@ const MainElement = styled.div`
     .grid-1 {
         background: green;
         overflow-y: scroll;
-        padding-top: 7.5rem;
+        margin-top: 7.5rem;
         padding-bottom: 1.5rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        scrollbar-width: none;
     }
 
     .grid-2 {
         background: blue;
         height: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        .test-1 {
+            height: 100%;
+            overflow: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scrollbar-width: none;
+        }
+
+        .test-2 {
+            background: yellow;
+        }
+    }
+
+    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
+    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        grid-template-columns: 2fr 0;
+        gap: 0;
+
+        .grid-1 {
+            margin-top: 0;
+        }
+
+        .grid-2 {
+            display: none;
+        }
+    }
+
+    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
+    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
+    
+    }
+
+    /* Tablet Potrait */
+    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        grid-template-columns: 2fr 0;
+        gap: 0;
+
+        .grid-1 {
+            margin-top: 0;
+        }
+
+        .grid-2 {
+            display: none;
+        }
     }
 `;
 

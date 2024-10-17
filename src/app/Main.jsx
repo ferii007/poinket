@@ -134,6 +134,14 @@ const Main = () => {
 
                             <div className="grid-2">
                                 <h1>Grid 2</h1>
+
+                                <div className="test-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nesciunt.
+                                </div>
+
+                                <div className="test-2">
+                                    Lorem ipsum dolor sit amet.
+                                </div>
                             </div>
                         </MainElement>
                     </MainBox>
