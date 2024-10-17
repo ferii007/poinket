@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const mobileResolutionPotrait = `480px`;
-const mobileResolutionLandscape = `959px`;
+const mobileResolutionLandscape = `1020px`;
 const tabletResolutionMin = `765px`;
 const tabletResolutionMax = `1024px`;
 

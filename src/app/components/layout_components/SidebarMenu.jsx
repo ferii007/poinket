@@ -30,61 +30,6 @@ const SidebarMenu = () => {
             name: translations.bills,
             active: 'bills',
         },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: translations.bills,
-            active: 'bills',
-        },
-        {
-            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
-            name: "test",
-            active: 'bills',
-        },
     ];
 
     const handleChangeActiveMenu = (currentActive) => {
@@ -120,21 +65,21 @@ const SidebarMenu = () => {
 
                 <SidebarMenuList>
                         <li 
-                            className={`menu-list`} 
-                            onClick={() => handleChangeActiveMenu('settings')}
-                        >
-                            <SettingsOutlinedIcon style={{ fontSize: '1.8rem' }} />
-
-                            <span style={{ display: 'block' }}>Settings</span>
-                        </li>
-
-                        <li 
                             className={`menu-list checkout-menu`} 
                             onClick={() => handleChangeActiveMenu('test')}
                         >
                             <ProductionQuantityLimitsOutlinedIcon style={{ fontSize: '1.8rem' }} />
 
                             <span style={{ display: 'block' }}>Checkout</span>
+                        </li>
+
+                        <li 
+                            className={`menu-list`} 
+                            onClick={() => handleChangeActiveMenu('settings')}
+                        >
+                            <SettingsOutlinedIcon style={{ fontSize: '1.8rem' }} />
+
+                            <span style={{ display: 'block' }}>{translations.settings}</span>
                         </li>
                 </SidebarMenuList>
             </SidebarMenuContainer>

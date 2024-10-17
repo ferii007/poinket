@@ -9,24 +9,31 @@ import {
 
 
 const SidebarMenuContainer = styled.div`
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
-    padding: 3rem 0.5rem;
-    background-color: var(--secondary-color);
+    justify-content: space-between;
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: 0.4rem;
+    left: 0;
+    bottom: 0.4rem;
     overflow: hidden;
+    padding: 1rem 0;
     z-index: 1;
+    max-width: 6.5rem;
     
 
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        max-width: unset;
+        max-height: 5rem;
+        flex-direction: row;
+        align-items: baseline;
+        top: 0;
         bottom: unset;
         left: 0;
         right: 0;
-        padding: 0.5rem;
-        flex-direction: row;
+        padding: 0 0.5rem;
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
@@ -36,19 +43,46 @@ const SidebarMenuContainer = styled.div`
 
     /* Tablet Potrait */
     @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        max-width: unset;
+        max-height: 5rem;
+        flex-direction: row;
+        align-items: baseline;
+        top: 0;
         bottom: unset;
         left: 0;
         right: 0;
-        padding: 0.7rem;
-        flex-direction: row;
+        padding: 0 0.5rem;
     }
 `;
 
 const SidebarMenuList = styled.ul`
     display: flex; 
+    flex: 0 0 auto;
     flex-direction: column; 
-    align-items: center; 
+    align-items: baseline; 
     gap: 0.7rem;
+    overflow: hidden;
+    padding: 0 0.5rem;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        width: 0.3rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        // border-radius: 1rem;
+    }
+    
+    &:first-child {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-height: 70%;
+    }
 
     .menu-list {
         flex: 0 0 auto;
@@ -73,74 +107,34 @@ const SidebarMenuList = styled.ul`
         background-color: var(--primary-color);
     }
 
-    .checkout-menu {
-        display: none;
-    }
-
-    &:first-child {
-        overflow: scroll;
-    }
-
-    &:not(:first-child) {
-        padding-top: 0.8rem;
-    }
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    & {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
-        flex: 0 0 auto;
-        padding: 0;
+        padding: 0.5rem 0;
         flex-direction: row;
-
+        
         &:first-child {
-            overflow: scroll;
-            max-width: 14.3rem;
-        }
-
-        &:not(:first-child) {
-            padding-top: 0;
-            margin-left: 0.7rem;
-        }
-
-        .menu-list {
-            width: 5rem;
-        }
-
-        .checkout-menu {
-            display: block;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 50%;
         }
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-        padding: 0;
+        &:first-child {
+            max-height: 55%;
+        }
     }
 
     /* Tablet Potrait */
     @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
-        flex: 0 0 auto;
-        padding: 0;
+        padding: 0.5rem 0;
         flex-direction: row;
-
-        &:first-child {
-            max-width: 34rem;
-        }
-            
-        &:not(:first-child) {
-            padding-top: 0;
-            margin-left: 0.8rem;
-        }
         
-        .checkout-menu {
-            display: block;
+        &:first-child {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 70%;
         }
     }
 `;
