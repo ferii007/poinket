@@ -176,7 +176,6 @@ const MainBox = styled.div`
     bottom: 0.4rem;
     left: 7.5rem;
     right: 0;
-    opacity: 0.5;
 
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
@@ -201,6 +200,20 @@ const MainBox = styled.div`
 const MainElement = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 0.8rem;
+    height: 100%;
+    
+    .grid-1 {
+        background: green;
+        overflow-y: scroll;
+        padding-top: 7.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .grid-2 {
+        background: blue;
+        height: 100%;
+    }
 `;
 
 export {

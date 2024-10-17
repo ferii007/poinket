@@ -54,6 +54,16 @@ const Main = () => {
         }
     }
 
+    const handleDataCategories = async () => {
+        try {
+            const response = await axios.get('/dummyAPI/dataCategoriesAPI.json');
+
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
     const handleDataFromLocalStorage = async () => {
         try {
             const storedLanguage = localStorage.getItem('language');
@@ -77,6 +87,8 @@ const Main = () => {
                 dataFromLocalStorage(dataLocalStorage);
 
                 await handleDataLogin();
+
+                await handleDataCategories();
             } catch (error) {
                 console.log('error', error);
 
@@ -117,6 +129,7 @@ const Main = () => {
                         <MainElement>
                             <div className="grid-1">
                                 <h1>Grid 1</h1>
+                                <ProductComponent />
                             </div>
 
                             <div className="grid-2">
@@ -125,9 +138,6 @@ const Main = () => {
                         </MainElement>
                     </MainBox>
                 </MainContainer>
-
-                
-                {/* <ProductComponent /> */}
             </main>
         </>
     )

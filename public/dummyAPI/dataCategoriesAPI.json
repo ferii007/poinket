@@ -1,44 +1,42 @@
-{
-    "categories": [
-        {
-            "id": 1,
-            "name": "Electronics"
-        },
-        {
-            "id": 2,
-            "name": "Accessories"
-        },
-        {
-            "id": 3,
-            "name": "Home Appliances"
-        },
-        {
-            "id": 4,
-            "name": "Transportation"
-        },
-        {
-            "id": 5,
-            "name": "Wearable"
-        },
-        {
-            "id": 6,
-            "name": "Gaming"
-        },
-        {
-            "id": 7,
-            "name": "Storage"
-        },
-        {
-            "id": 8,
-            "name": "Camera"
-        },
-        {
-            "id": 9,
-            "name": "Personal Care"
-        },
-        {
-            "id": 10,
-            "name": "Furniture"
-        }
-    ]
-}    
+[
+    {
+        "id": 1,
+        "name": "Electronics"
+    },
+    {
+        "id": 2,
+        "name": "Accessories"
+    },
+    {
+        "id": 3,
+        "name": "Home Appliances"
+    },
+    {
+        "id": 4,
+        "name": "Transportation"
+    },
+    {
+        "id": 5,
+        "name": "Wearable"
+    },
+    {
+        "id": 6,
+        "name": "Gaming"
+    },
+    {
+        "id": 7,
+        "name": "Storage"
+    },
+    {
+        "id": 8,
+        "name": "Camera"
+    },
+    {
+        "id": 9,
+        "name": "Personal Care"
+    },
+    {
+        "id": 10,
+        "name": "Furniture"
+    }
+]
