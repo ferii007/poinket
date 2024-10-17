@@ -147,6 +147,56 @@ const DropdownItem = styled.div`
     }
 `;
 
+const MainContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
+    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        
+    }
+
+    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
+    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
+    
+    }
+
+    /* Tablet Potrait */
+    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        
+    }
+`;
+
+const MainBox = styled.div`
+    background: red;
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: 7.5rem;
+    right: 0;
+    opacity: 0.5;
+
+    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
+    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        left: 0;
+        top: 12.5rem;
+        bottom: 0;
+    }
+
+    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
+    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
+    
+    }
+
+    /* Tablet Potrait */
+    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        left: 0;
+        top: 12.5rem;
+        bottom: 0;
+    }
+`;
+
 export {
     DefaultButton,
     LoaderAnimationContainer,
@@ -163,5 +213,7 @@ export {
     DropdownContainer,
     DropdownButton,
     DropdownMenu,
-    DropdownItem
+    DropdownItem,
+    MainContainer,
+    MainBox
 }

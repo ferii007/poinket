@@ -12,6 +12,7 @@ const HeaderMenuContainer = styled.div`
     position: fixed;
     left: 7.5rem;
     top: 1rem;
+    z-index: 1;
 
     .header-outlet-name {
         font-size: 1.3rem;
@@ -39,7 +40,7 @@ const HeaderMenuContainer = styled.div`
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-        
+
     }
 
     /* Tablet Potrait */
