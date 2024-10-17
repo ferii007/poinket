@@ -102,7 +102,7 @@ const Main = () => {
                     </div>
 
                     <div>
-                        <HeaderMenu />
+                        {/* <HeaderMenu /> */}
                     </div>
 
                     {/* <div style={{...contentStyle[isContentLoaded ? 'contentLoaded' : 'contentNotLoaded'], zIndex: '0 !important'}}>

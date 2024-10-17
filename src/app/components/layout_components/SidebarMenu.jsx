@@ -29,7 +29,62 @@ const SidebarMenu = () => {
             icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
             name: translations.bills,
             active: 'bills',
-        }
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: translations.bills,
+            active: 'bills',
+        },
+        {
+            icon: <Inventory2OutlinedIcon style={{ fontSize: '1.8rem' }} />,
+            name: "test",
+            active: 'bills',
+        },
     ];
 
     const handleChangeActiveMenu = (currentActive) => {
