@@ -127,8 +127,7 @@ const Main = () => {
                 <MainContainer>
                     <MainBox>
                         <MainElement>
-                            <div className="grid-1">
-                                <h1>Grid 1</h1>
+                            <div className="container-1">
                                 <ProductComponent />
                             </div>
 

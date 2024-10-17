@@ -170,7 +170,6 @@ const MainContainer = styled.div`
 `;
 
 const MainBox = styled.div`
-    background: red;
     position: absolute;
     top: 0.4rem;
     bottom: 0.4rem;
@@ -203,8 +202,7 @@ const MainElement = styled.div`
     gap: 0.8rem;
     height: 100%;
     
-    .grid-1 {
-        background: green;
+    .container-1 {
         overflow-y: scroll;
         margin-top: 7.5rem;
         padding-bottom: 1.5rem;
@@ -244,7 +242,7 @@ const MainElement = styled.div`
         grid-template-columns: 2fr 0;
         gap: 0;
 
-        .grid-1 {
+        .container-1 {
             margin-top: 0;
         }
 
@@ -263,7 +261,7 @@ const MainElement = styled.div`
         grid-template-columns: 2fr 0;
         gap: 0;
 
-        .grid-1 {
+        .container-1 {
             margin-top: 0;
         }
 
