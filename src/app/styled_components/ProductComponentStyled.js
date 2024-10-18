@@ -10,7 +10,104 @@ import {
 
 const ProductContainer = styled.div`
     padding-top: 1rem;
+
+    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
+    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        
+    }
+
+    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
+    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
+
+    }
+
+    /* Tablet Potrait */
+    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        
+    }
+`;
+
+const ProductBox = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     
+    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
+    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        
+    }
+
+    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
+    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
+
+    }
+
+    /* Tablet Potrait */
+    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        
+    }
+`;
+
+const ProductList = styled.div`
+    background: white;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 15rem;
+    // height: 17rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+
+    .product-img {
+        width: 100%;
+        height: 12rem;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .product-info {
+        padding: 1rem 0.6rem;
+    }
+
+    .product-name {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+
+        margin-bottom: 2rem;
+    }
+
+    .product-stock {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: end;
+
+        .stock-available {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .stock-unavailable {
+            color: red;
+        }
+    }
+
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
         
@@ -90,5 +187,7 @@ export {
     ProductContainer,
     CategoriesContainer,
     CategoriesBox,
-    CategoriesMenu
+    CategoriesMenu,
+    ProductBox,
+    ProductList,
 }

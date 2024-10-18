@@ -6,7 +6,7 @@
         "category_id": 1,
         "original_price": 12500000,
         "stock": 10,
-        "infinity_stock": false,
+        "infinity_stock": true,
         "sku": "ELC-1001",
         "product_discount": 10,
         "variants": {
@@ -40,7 +40,7 @@
         "category_name": "Electronics",
         "category_id": 1,
         "original_price": 8500000,
-        "stock": 25,
+        "stock": 0,
         "infinity_stock": false,
         "sku": "ELC-1002",
         "product_discount": 5,
