@@ -52,7 +52,7 @@ const ProductList = styled.div`
     background: white;
     flex: 0 0 auto;
     width: 100%;
-    max-width: 15rem;
+    width: 15rem;
     height: 20.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
