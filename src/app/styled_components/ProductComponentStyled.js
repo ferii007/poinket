@@ -53,7 +53,7 @@ const ProductList = styled.div`
     flex: 0 0 auto;
     width: 100%;
     max-width: 15rem;
-    // height: 17rem;
+    height: 20.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     overflow: hidden;
@@ -128,6 +128,8 @@ const CategoriesContainer = styled.div`
     background-color: var(--third-color);
     position: sticky;
     top: 0;
+    z-index: 1;
+
     &::after {
         content: "";
         position: absolute;

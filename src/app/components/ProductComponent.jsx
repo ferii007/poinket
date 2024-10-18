@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import {
     CategoriesContainer,
@@ -10,6 +11,10 @@ import {
     ProductBox,
     ProductList,
 } from '../styled_components/ProductComponentStyled';
+
+import {
+    modalVariants
+} from './../tweaks/framerMotionVariants'
 
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import AllInclusiveOutlinedIcon from '@mui/icons-material/AllInclusiveOutlined';
@@ -22,6 +27,15 @@ const ProductComponent = () => {
     const [showProducts, setShowProducts] = useState([]);
     const [categoriesProduct, setCategoriesProduct] = useState([]);
     const [activeCategory, setActiveCategory] = useState({categoryName: 'all', categoryID: null});
+    const [loadedImages, setLoadedImages] = useState(null);
+
+    const handleImageLoad = (index) => {
+        setLoadedImages(prev => {
+            const newLoadedImages = [...prev];
+            newLoadedImages[index] = true;
+            return newLoadedImages;
+        });
+    };
 
     const handleChangeCategory = (categoryName, categoryID = null) => {
         setActiveCategory({
@@ -38,6 +52,8 @@ const ProductComponent = () => {
         if (categoryName !== 'all') {
             filteredProducts = originalProducts.filter(product => product.category_name === categoryName && product.category_id === categoryID);
         }
+
+        setLoadedImages(filteredProducts)
 
         setShowProducts(filteredProducts);
     }
@@ -114,58 +130,67 @@ const ProductComponent = () => {
                     {/* <h1>Products</h1> */}
 
                     <ProductBox>
-                        {showProducts.length > 0 ? (
-                            showProducts.map((product, index) => (
-                                <ProductList key={index}>
-                                    <div className='product-img'>
-                                        <img src="no_image.jpg" alt="" />
+                        <AnimatePresence>
+                            {showProducts.length > 0 ? (
+                                showProducts.map((product, index) => (
+                                    loadedImages[index] && (
+                                        <motion.div
+                                            key={index}
+                                            variants={modalVariants}
+                                            initial="initial"
+                                            animate="animate"
+                                            exit="exit"
+                                        >
+                                            <ProductList>
+                                                <div className='product-img'>
+                                                    <img 
+                                                        src={product.image || "no_image.jpg"} 
+                                                        alt="" 
+                                                        onLoad={() => handleImageLoad(index)} 
+                                                    />
+                                                </div>
+
+                                                <div className='product-info'>
+                                                    <h1 className='product-name'>
+                                                        {product.name}
+                                                    </h1>
+
+                                                    <h3 className='product-price'>
+                                                        Rp. {product.original_price}
+                                                    </h3>
+
+                                                    <h3 className='product-stock'>
+                                                        {product.infinity_stock === true ? (
+                                                            <span className='stock-available' style={{ padding: '0.4rem' }}>
+                                                                <AllInclusiveOutlinedIcon style={{ fontSize: '0.9rem' }} />
+                                                            </span>
+                                                        ) : product.stock > 0 ? (
+                                                            <span className='stock-available'>{product.stock}</span>
+                                                        ) : (
+                                                            <span className='stock-unavailable'>Out of stock</span>
+                                                        )}
+                                                    </h3>
+                                                </div>
+                                            </ProductList>
+                                        </motion.div>
+                                    )
+                                ))
+                            ) : (
+                                <>
+                                    <div style={{ position: 'absolute' }}>
+                                        <motion.div
+                                            key="no-products"
+                                            variants={modalVariants}
+                                            initial="initial"
+                                            animate="animate"
+                                            exit="exit"
+                                        >
+                                            <div>No products</div>
+                                        </motion.div>
                                     </div>
-
-                                    <div className='product-info'>
-                                        <h1 className='product-name'>
-                                            {product.name}
-                                        </h1>
-
-                                        <h3 className='product-price'>
-                                            Rp. {product.original_price}
-                                        </h3>
-                                        
-                                        <h3 className='product-stock'>
-                                            {
-                                                product.infinity_stock === true &&
-                                                (
-                                                   <>
-                                                        <span className='stock-available' style={{ padding: '0.4rem' }}>
-                                                            <AllInclusiveOutlinedIcon style={{ fontSize: '0.9rem' }} />
-                                                        </span> 
-                                                   </>
-                                                )
-                                            }
-
-                                            {
-                                                product.infinity_stock === false && product.stock > 0 &&
-                                                (
-                                                   <>
-                                                        <span className='stock-available'>{product.stock}</span> 
-                                                   </>
-                                                )
-                                            }
-
-                                            {
-                                                product.infinity_stock === false && product.stock <= 0 &&
-                                                (
-                                                   <>
-                                                        <span className='stock-unavailable'>Out of stock</span> 
-                                                   </>
-                                                )
-                                            }
-                                        </h3>
-                                    </div>
-                                </ProductList>
-                            ))
-                        ) : (
-                            <div>No products</div>
-                        )}
+                                </>
+                            )}
+                        </AnimatePresence>
                     </ProductBox>
                 </div>
             </ProductContainer>
