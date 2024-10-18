@@ -204,7 +204,7 @@ const MainElement = styled.div`
     
     .container-1 {
         overflow-y: scroll;
-        margin-top: 7.5rem;
+        margin-top: 6.5rem;
         padding-bottom: 1.5rem;
 
         &::-webkit-scrollbar {

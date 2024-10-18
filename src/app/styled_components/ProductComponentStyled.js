@@ -9,13 +9,21 @@ import {
 
 
 const ProductContainer = styled.div`
-    .testing {
+    .container {
         background-color: var(--third-color);
         position: sticky;
         top: 0;
-        padding-bottom: 0.5rem;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 0.2rem solid rgba(0, 0, 0, 0.5);
+            border-radius: 0.5rem;
+            opacity: 0.5;
+        }
     }
-
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
         
@@ -32,6 +40,51 @@ const ProductContainer = styled.div`
     }
 `;
 
+const CategoriesContainer = styled.div`
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 0.3rem;
+    
+    &::-webkit-scrollbar {
+        width: 0.2rem;
+        height: 0.2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 0.5rem;
+    }
+`;
+
+const CategoriesMenu = styled.ul`
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    .list-category {
+        flex: 0 0 auto;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .list-category.active-category {
+        color: var(--primary-color);
+    }
+
+    .list-category:hover {
+        color: var(--primary-color);
+    }
+`;
+
 export {
-    ProductContainer
+    ProductContainer,
+    CategoriesContainer,
+    CategoriesMenu
 }
