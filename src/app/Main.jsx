@@ -21,7 +21,8 @@ const Main = () => {
     const {
         dataLogin,
         dataFromLocalStorage,
-        dataCategories
+        dataCategories,
+        dataProducts
     } = bindActionCreators(actionCreators, dispatch);
 
     const [isContentLoaded, setIsContentLoaded] = useState(true);
@@ -67,6 +68,18 @@ const Main = () => {
         }
     }
 
+    const handleDataProducts = async () => {
+        try {
+            const response = await axios.get('/dummyAPI/dataProductsAPI.json');
+
+            dataProducts(response.data);
+
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
     const handleDataFromLocalStorage = async () => {
         try {
             const storedLanguage = localStorage.getItem('language');
@@ -92,6 +105,8 @@ const Main = () => {
                 await handleDataLogin();
 
                 await handleDataCategories();
+
+                await handleDataProducts();
             } catch (error) {
                 console.log('error', error);
 

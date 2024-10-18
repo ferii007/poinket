@@ -1,966 +1,964 @@
-{
-    "products": [
-        {
-            "id": 1,
-            "name": "Laptop",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 12500000,
-            "stock": 10,
-            "infinity_stock": false,
-            "sku": "ELC-1001",
-            "product_discount": 10,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "Silver", "Gray"]
-                    },
-                    {
-                        "name": "Storage",
-                        "type": "required",
-                        "values": ["256GB", "512GB", "1TB"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Extended Warranty",
-                        "price": 1000000
-                    },
-                    {
-                        "name": "Laptop Bag",
-                        "price": 300000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 2,
-            "name": "Smartphone",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 8500000,
-            "stock": 25,
-            "infinity_stock": false,
-            "sku": "ELC-1002",
-            "product_discount": 5,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "White", "Blue"]
-                    },
-                    {
-                        "name": "Storage",
-                        "type": "required",
-                        "values": ["64GB", "128GB", "256GB"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Screen Protector",
-                        "price": 50000
-                    },
-                    {
-                        "name": "Phone Case",
-                        "price": 150000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 3,
-            "name": "Wireless Mouse",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 250000,
-            "stock": 50,
-            "infinity_stock": true,
-            "sku": "ACC-1003",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 4,
-            "name": "Bluetooth Speaker",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 450000,
-            "stock": 15,
-            "infinity_stock": false,
-            "sku": "ELC-1004",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["Black", "Red", "Green"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 5,
-            "name": "Gaming Headset",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 550000,
-            "stock": 30,
-            "infinity_stock": false,
-            "sku": "ACC-1005",
-            "product_discount": 15,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "White"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Carrying Case",
-                        "price": 100000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 6,
-            "name": "External Hard Drive 1TB",
-            "category_name": "Storage",
-            "category_id": 7,
-            "original_price": 750000,
-            "stock": 20,
-            "infinity_stock": false,
-            "sku": "STR-1006",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 7,
-            "name": "Monitor 24 inch",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 3000000,
-            "stock": 8,
-            "infinity_stock": false,
-            "sku": "ELC-1007",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Resolution",
-                        "type": "optional",
-                        "values": ["1080p", "1440p"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 8,
-            "name": "Keyboard Mechanical",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 800000,
-            "stock": 18,
-            "infinity_stock": false,
-            "sku": "ACC-1008",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Switch Type",
-                        "type": "required",
-                        "values": ["Red", "Blue", "Brown"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 9,
-            "name": "USB Flash Drive 32GB",
-            "category_name": "Storage",
-            "category_id": 7,
-            "original_price": 120000,
-            "stock": 100,
-            "infinity_stock": true,
-            "sku": "STR-1009",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 10,
-            "name": "Laptop Stand",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 150000,
-            "stock": 45,
-            "infinity_stock": false,
-            "sku": "ACC-1010",
-            "product_discount": 10,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 11,
-            "name": "Smartwatch",
-            "category_name": "Wearable",
-            "category_id": 5,
-            "original_price": 1800000,
-            "stock": 12,
-            "infinity_stock": false,
-            "sku": "WRB-1011",
-            "product_discount": 5,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "White", "Pink"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Extra Strap",
-                        "price": 100000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 12,
-            "name": "Action Camera",
-            "category_name": "Camera",
-            "category_id": 8,
-            "original_price": 3500000,
-            "stock": 10,
-            "infinity_stock": false,
-            "sku": "CAM-1012",
-            "product_discount": 10,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Resolution",
-                        "type": "optional",
-                        "values": ["4K", "1080p"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Waterproof Case",
-                        "price": 200000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 13,
-            "name": "Tablet",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 5000000,
-            "stock": 30,
-            "infinity_stock": false,
-            "sku": "ELC-1013",
-            "product_discount": 5,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Storage",
-                        "type": "required",
-                        "values": ["64GB", "128GB", "256GB"]
-                    },
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "Gold"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Stylus Pen",
-                        "price": 500000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 14,
-            "name": "Smart TV 55 inch",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 8000000,
-            "stock": 7,
-            "infinity_stock": false,
-            "sku": "HOM-1014",
-            "product_discount": 10,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Resolution",
-                        "type": "required",
-                        "values": ["4K", "1080p"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Wall Mount",
-                        "price": 200000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 15,
-            "name": "Blender",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 350000,
-            "stock": 40,
-            "infinity_stock": true,
-            "sku": "HOM-1015",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["White", "Black"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 16,
-            "name": "Microwave Oven",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 1200000,
-            "stock": 20,
-            "infinity_stock": false,
-            "sku": "HOM-1016",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["White", "Silver"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 17,
-            "name": "Rice Cooker",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 450000,
-            "stock": 35,
-            "infinity_stock": false,
-            "sku": "HOM-1017",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 18,
-            "name": "Electric Kettle",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 250000,
-            "stock": 50,
-            "infinity_stock": true,
-            "sku": "HOM-1018",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 19,
-            "name": "Air Fryer",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 1500000,
-            "stock": 10,
-            "infinity_stock": false,
-            "sku": "HOM-1019",
-            "product_discount": 5,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "White"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 20,
-            "name": "Vacuum Cleaner",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 850000,
-            "stock": 18,
-            "infinity_stock": false,
-            "sku": "HOM-1020",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 21,
-            "name": "Smart Light Bulb",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 200000,
-            "stock": 50,
-            "infinity_stock": true,
-            "sku": "HOM-1021",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color Temperature",
-                        "type": "optional",
-                        "values": ["Warm White", "Cool White", "Daylight"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 22,
-            "name": "Smart Thermostat",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 1500000,
-            "stock": 12,
-            "infinity_stock": false,
-            "sku": "HOM-1022",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 23,
-            "name": "Smart Door Lock",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 1800000,
-            "stock": 8,
-            "infinity_stock": false,
-            "sku": "HOM-1023",
-            "product_discount": 10,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 24,
-            "name": "Fitness Tracker",
-            "category_name": "Wearable",
-            "category_id": 5,
-            "original_price": 600000,
-            "stock": 30,
-            "infinity_stock": false,
-            "sku": "WRB-1024",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "Blue", "Pink"]
-                    }
-                ],
-                "extras": [
-                    {
-                        "name": "Extra Band",
-                        "price": 50000
-                    }
-                ]
-            }
-        },
-        {
-            "id": 25,
-            "name": "Electric Toothbrush",
-            "category_name": "Personal Care",
-            "category_id": 9,
-            "original_price": 300000,
-            "stock": 25,
-            "infinity_stock": false,
-            "sku": "PER-1025",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["White", "Blue"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 26,
-            "name": "Hair Dryer",
-            "category_name": "Personal Care",
-            "category_id": 9,
-            "original_price": 250000,
-            "stock": 35,
-            "infinity_stock": false,
-            "sku": "PER-1026",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 27,
-            "name": "Shaving Kit",
-            "category_name": "Personal Care",
-            "category_id": 9,
-            "original_price": 450000,
-            "stock": 20,
-            "infinity_stock": false,
-            "sku": "PER-1027",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 28,
-            "name": "Water Purifier",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 2000000,
-            "stock": 10,
-            "infinity_stock": false,
-            "sku": "HOM-1028",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 29,
-            "name": "Electric Grill",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 750000,
-            "stock": 15,
-            "infinity_stock": false,
-            "sku": "HOM-1029",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["Black", "Silver"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 30,
-            "name": "Air Conditioner 1.5PK",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 4500000,
-            "stock": 5,
-            "infinity_stock": false,
-            "sku": "HOM-1030",
-            "product_discount": 10,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["White"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 31,
-            "name": "Laptop Cooler",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 150000,
-            "stock": 40,
-            "infinity_stock": true,
-            "sku": "ACC-1031",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 32,
-            "name": "Wireless Charger",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 300000,
-            "stock": 20,
-            "infinity_stock": false,
-            "sku": "ACC-1032",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 33,
-            "name": "Portable Projector",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 2800000,
-            "stock": 10,
-            "infinity_stock": false,
-            "sku": "ELC-1033",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 34,
-            "name": "Smart Doorbell",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 850000,
-            "stock": 25,
-            "infinity_stock": false,
-            "sku": "HOM-1034",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 35,
-            "name": "Desktop PC",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 12000000,
-            "stock": 8,
-            "infinity_stock": false,
-            "sku": "ELC-1035",
-            "product_discount": 10,
-            "variants": {
-                "options": [
-                    {
-                        "name": "RAM",
-                        "type": "required",
-                        "values": ["8GB", "16GB"]
-                    },
-                    {
-                        "name": "Storage",
-                        "type": "required",
-                        "values": ["512GB SSD", "1TB SSD"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 36,
-            "name": "Ergonomic Office Chair",
-            "category_name": "Furniture",
-            "category_id": 10,
-            "original_price": 3500000,
-            "stock": 12,
-            "infinity_stock": false,
-            "sku": "FUR-1036",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "required",
-                        "values": ["Black", "Gray"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 37,
-            "name": "Standing Desk",
-            "category_name": "Furniture",
-            "category_id": 10,
-            "original_price": 5500000,
-            "stock": 7,
-            "infinity_stock": false,
-            "sku": "FUR-1037",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 38,
-            "name": "Smart Air Purifier",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 2500000,
-            "stock": 15,
-            "infinity_stock": false,
-            "sku": "HOM-1038",
-            "product_discount": 10,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 39,
-            "name": "Gaming Desk",
-            "category_name": "Furniture",
-            "category_id": 10,
-            "original_price": 2000000,
-            "stock": 10,
-            "infinity_stock": false,
-            "sku": "FUR-1039",
-            "product_discount": 5,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["Black", "Red"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 40,
-            "name": "VR Headset",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 9000000,
-            "stock": 5,
-            "infinity_stock": false,
-            "sku": "ELC-1040",
-            "product_discount": 10,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 41,
-            "name": "Smartphone Gimbal",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 1200000,
-            "stock": 15,
-            "infinity_stock": false,
-            "sku": "ACC-1041",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 42,
-            "name": "Bluetooth Speaker",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 800000,
-            "stock": 30,
-            "infinity_stock": true,
-            "sku": "ACC-1042",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["Black", "Gray", "Red"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 43,
-            "name": "Gaming Monitor",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 7000000,
-            "stock": 7,
-            "infinity_stock": false,
-            "sku": "ELC-1043",
-            "product_discount": 10,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 44,
-            "name": "Drone Camera",
-            "category_name": "Electronics",
-            "category_id": 1,
-            "original_price": 4500000,
-            "stock": 10,
-            "infinity_stock": false,
-            "sku": "ELC-1044",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 45,
-            "name": "Wireless Earbuds",
-            "category_name": "Accessories",
-            "category_id": 2,
-            "original_price": 1000000,
-            "stock": 25,
-            "infinity_stock": true,
-            "sku": "ACC-1045",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["White", "Black"]
-                    }
-                ],
-                "extras": []
-            }
-        },
-        {
-            "id": 46,
-            "name": "Electric Scooter",
-            "category_name": "Transportation",
-            "category_id": 4,
-            "original_price": 5000000,
-            "stock": 15,
-            "infinity_stock": false,
-            "sku": "TRN-1046",
-            "product_discount": 10,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 47,
-            "name": "Robot Vacuum",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 3000000,
-            "stock": 12,
-            "infinity_stock": false,
-            "sku": "HOM-1047",
-            "product_discount": 5,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 48,
-            "name": "Smart Refrigerator",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 10000000,
-            "stock": 8,
-            "infinity_stock": false,
-            "sku": "HOM-1048",
-            "product_discount": 10,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 49,
-            "name": "Security Camera",
-            "category_name": "Home Appliances",
-            "category_id": 3,
-            "original_price": 1500000,
-            "stock": 25,
-            "infinity_stock": true,
-            "sku": "HOM-1049",
-            "product_discount": 0,
-            "variants": {
-                "options": [],
-                "extras": []
-            }
-        },
-        {
-            "id": 50,
-            "name": "Smartwatch",
-            "category_name": "Wearable",
-            "category_id": 5,
-            "original_price": 2000000,
-            "stock": 30,
-            "infinity_stock": true,
-            "sku": "WRB-1050",
-            "product_discount": 0,
-            "variants": {
-                "options": [
-                    {
-                        "name": "Color",
-                        "type": "optional",
-                        "values": ["Black", "Silver"]
-                    }
-                ],
-                "extras": []
-            }
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 12500000,
+        "stock": 10,
+        "infinity_stock": false,
+        "sku": "ELC-1001",
+        "product_discount": 10,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "Silver", "Gray"]
+                },
+                {
+                    "name": "Storage",
+                    "type": "required",
+                    "values": ["256GB", "512GB", "1TB"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Extended Warranty",
+                    "price": 1000000
+                },
+                {
+                    "name": "Laptop Bag",
+                    "price": 300000
+                }
+            ]
         }
-    ]
-}
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 8500000,
+        "stock": 25,
+        "infinity_stock": false,
+        "sku": "ELC-1002",
+        "product_discount": 5,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "White", "Blue"]
+                },
+                {
+                    "name": "Storage",
+                    "type": "required",
+                    "values": ["64GB", "128GB", "256GB"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Screen Protector",
+                    "price": 50000
+                },
+                {
+                    "name": "Phone Case",
+                    "price": 150000
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "name": "Wireless Mouse",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 250000,
+        "stock": 50,
+        "infinity_stock": true,
+        "sku": "ACC-1003",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 4,
+        "name": "Bluetooth Speaker",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 450000,
+        "stock": 15,
+        "infinity_stock": false,
+        "sku": "ELC-1004",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["Black", "Red", "Green"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 5,
+        "name": "Gaming Headset",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 550000,
+        "stock": 30,
+        "infinity_stock": false,
+        "sku": "ACC-1005",
+        "product_discount": 15,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "White"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Carrying Case",
+                    "price": 100000
+                }
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "name": "External Hard Drive 1TB",
+        "category_name": "Storage",
+        "category_id": 7,
+        "original_price": 750000,
+        "stock": 20,
+        "infinity_stock": false,
+        "sku": "STR-1006",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 7,
+        "name": "Monitor 24 inch",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 3000000,
+        "stock": 8,
+        "infinity_stock": false,
+        "sku": "ELC-1007",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Resolution",
+                    "type": "optional",
+                    "values": ["1080p", "1440p"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 8,
+        "name": "Keyboard Mechanical",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 800000,
+        "stock": 18,
+        "infinity_stock": false,
+        "sku": "ACC-1008",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Switch Type",
+                    "type": "required",
+                    "values": ["Red", "Blue", "Brown"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 9,
+        "name": "USB Flash Drive 32GB",
+        "category_name": "Storage",
+        "category_id": 7,
+        "original_price": 120000,
+        "stock": 100,
+        "infinity_stock": true,
+        "sku": "STR-1009",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 10,
+        "name": "Laptop Stand",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 150000,
+        "stock": 45,
+        "infinity_stock": false,
+        "sku": "ACC-1010",
+        "product_discount": 10,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 11,
+        "name": "Smartwatch",
+        "category_name": "Wearable",
+        "category_id": 5,
+        "original_price": 1800000,
+        "stock": 12,
+        "infinity_stock": false,
+        "sku": "WRB-1011",
+        "product_discount": 5,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "White", "Pink"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Extra Strap",
+                    "price": 100000
+                }
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "name": "Action Camera",
+        "category_name": "Camera",
+        "category_id": 8,
+        "original_price": 3500000,
+        "stock": 10,
+        "infinity_stock": false,
+        "sku": "CAM-1012",
+        "product_discount": 10,
+        "variants": {
+            "options": [
+                {
+                    "name": "Resolution",
+                    "type": "optional",
+                    "values": ["4K", "1080p"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Waterproof Case",
+                    "price": 200000
+                }
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "name": "Tablet",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 5000000,
+        "stock": 30,
+        "infinity_stock": false,
+        "sku": "ELC-1013",
+        "product_discount": 5,
+        "variants": {
+            "options": [
+                {
+                    "name": "Storage",
+                    "type": "required",
+                    "values": ["64GB", "128GB", "256GB"]
+                },
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "Gold"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Stylus Pen",
+                    "price": 500000
+                }
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "name": "Smart TV 55 inch",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 8000000,
+        "stock": 7,
+        "infinity_stock": false,
+        "sku": "HOM-1014",
+        "product_discount": 10,
+        "variants": {
+            "options": [
+                {
+                    "name": "Resolution",
+                    "type": "required",
+                    "values": ["4K", "1080p"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Wall Mount",
+                    "price": 200000
+                }
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "name": "Blender",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 350000,
+        "stock": 40,
+        "infinity_stock": true,
+        "sku": "HOM-1015",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["White", "Black"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 16,
+        "name": "Microwave Oven",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 1200000,
+        "stock": 20,
+        "infinity_stock": false,
+        "sku": "HOM-1016",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["White", "Silver"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 17,
+        "name": "Rice Cooker",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 450000,
+        "stock": 35,
+        "infinity_stock": false,
+        "sku": "HOM-1017",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 18,
+        "name": "Electric Kettle",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 250000,
+        "stock": 50,
+        "infinity_stock": true,
+        "sku": "HOM-1018",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 19,
+        "name": "Air Fryer",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 1500000,
+        "stock": 10,
+        "infinity_stock": false,
+        "sku": "HOM-1019",
+        "product_discount": 5,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "White"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 20,
+        "name": "Vacuum Cleaner",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 850000,
+        "stock": 18,
+        "infinity_stock": false,
+        "sku": "HOM-1020",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 21,
+        "name": "Smart Light Bulb",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 200000,
+        "stock": 50,
+        "infinity_stock": true,
+        "sku": "HOM-1021",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color Temperature",
+                    "type": "optional",
+                    "values": ["Warm White", "Cool White", "Daylight"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 22,
+        "name": "Smart Thermostat",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 1500000,
+        "stock": 12,
+        "infinity_stock": false,
+        "sku": "HOM-1022",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 23,
+        "name": "Smart Door Lock",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 1800000,
+        "stock": 8,
+        "infinity_stock": false,
+        "sku": "HOM-1023",
+        "product_discount": 10,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 24,
+        "name": "Fitness Tracker",
+        "category_name": "Wearable",
+        "category_id": 5,
+        "original_price": 600000,
+        "stock": 30,
+        "infinity_stock": false,
+        "sku": "WRB-1024",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "Blue", "Pink"]
+                }
+            ],
+            "extras": [
+                {
+                    "name": "Extra Band",
+                    "price": 50000
+                }
+            ]
+        }
+    },
+    {
+        "id": 25,
+        "name": "Electric Toothbrush",
+        "category_name": "Personal Care",
+        "category_id": 9,
+        "original_price": 300000,
+        "stock": 25,
+        "infinity_stock": false,
+        "sku": "PER-1025",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["White", "Blue"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 26,
+        "name": "Hair Dryer",
+        "category_name": "Personal Care",
+        "category_id": 9,
+        "original_price": 250000,
+        "stock": 35,
+        "infinity_stock": false,
+        "sku": "PER-1026",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 27,
+        "name": "Shaving Kit",
+        "category_name": "Personal Care",
+        "category_id": 9,
+        "original_price": 450000,
+        "stock": 20,
+        "infinity_stock": false,
+        "sku": "PER-1027",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 28,
+        "name": "Water Purifier",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 2000000,
+        "stock": 10,
+        "infinity_stock": false,
+        "sku": "HOM-1028",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 29,
+        "name": "Electric Grill",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 750000,
+        "stock": 15,
+        "infinity_stock": false,
+        "sku": "HOM-1029",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["Black", "Silver"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 30,
+        "name": "Air Conditioner 1.5PK",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 4500000,
+        "stock": 5,
+        "infinity_stock": false,
+        "sku": "HOM-1030",
+        "product_discount": 10,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["White"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 31,
+        "name": "Laptop Cooler",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 150000,
+        "stock": 40,
+        "infinity_stock": true,
+        "sku": "ACC-1031",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 32,
+        "name": "Wireless Charger",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 300000,
+        "stock": 20,
+        "infinity_stock": false,
+        "sku": "ACC-1032",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 33,
+        "name": "Portable Projector",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 2800000,
+        "stock": 10,
+        "infinity_stock": false,
+        "sku": "ELC-1033",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 34,
+        "name": "Smart Doorbell",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 850000,
+        "stock": 25,
+        "infinity_stock": false,
+        "sku": "HOM-1034",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 35,
+        "name": "Desktop PC",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 12000000,
+        "stock": 8,
+        "infinity_stock": false,
+        "sku": "ELC-1035",
+        "product_discount": 10,
+        "variants": {
+            "options": [
+                {
+                    "name": "RAM",
+                    "type": "required",
+                    "values": ["8GB", "16GB"]
+                },
+                {
+                    "name": "Storage",
+                    "type": "required",
+                    "values": ["512GB SSD", "1TB SSD"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 36,
+        "name": "Ergonomic Office Chair",
+        "category_name": "Furniture",
+        "category_id": 10,
+        "original_price": 3500000,
+        "stock": 12,
+        "infinity_stock": false,
+        "sku": "FUR-1036",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "required",
+                    "values": ["Black", "Gray"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 37,
+        "name": "Standing Desk",
+        "category_name": "Furniture",
+        "category_id": 10,
+        "original_price": 5500000,
+        "stock": 7,
+        "infinity_stock": false,
+        "sku": "FUR-1037",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 38,
+        "name": "Smart Air Purifier",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 2500000,
+        "stock": 15,
+        "infinity_stock": false,
+        "sku": "HOM-1038",
+        "product_discount": 10,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 39,
+        "name": "Gaming Desk",
+        "category_name": "Furniture",
+        "category_id": 10,
+        "original_price": 2000000,
+        "stock": 10,
+        "infinity_stock": false,
+        "sku": "FUR-1039",
+        "product_discount": 5,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["Black", "Red"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 40,
+        "name": "VR Headset",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 9000000,
+        "stock": 5,
+        "infinity_stock": false,
+        "sku": "ELC-1040",
+        "product_discount": 10,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 41,
+        "name": "Smartphone Gimbal",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 1200000,
+        "stock": 15,
+        "infinity_stock": false,
+        "sku": "ACC-1041",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 42,
+        "name": "Bluetooth Speaker",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 800000,
+        "stock": 30,
+        "infinity_stock": true,
+        "sku": "ACC-1042",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["Black", "Gray", "Red"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 43,
+        "name": "Gaming Monitor",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 7000000,
+        "stock": 7,
+        "infinity_stock": false,
+        "sku": "ELC-1043",
+        "product_discount": 10,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 44,
+        "name": "Drone Camera",
+        "category_name": "Electronics",
+        "category_id": 1,
+        "original_price": 4500000,
+        "stock": 10,
+        "infinity_stock": false,
+        "sku": "ELC-1044",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 45,
+        "name": "Wireless Earbuds",
+        "category_name": "Accessories",
+        "category_id": 2,
+        "original_price": 1000000,
+        "stock": 25,
+        "infinity_stock": true,
+        "sku": "ACC-1045",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["White", "Black"]
+                }
+            ],
+            "extras": []
+        }
+    },
+    {
+        "id": 46,
+        "name": "Electric Scooter",
+        "category_name": "Transportation",
+        "category_id": 4,
+        "original_price": 5000000,
+        "stock": 15,
+        "infinity_stock": false,
+        "sku": "TRN-1046",
+        "product_discount": 10,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 47,
+        "name": "Robot Vacuum",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 3000000,
+        "stock": 12,
+        "infinity_stock": false,
+        "sku": "HOM-1047",
+        "product_discount": 5,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 48,
+        "name": "Smart Refrigerator",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 10000000,
+        "stock": 8,
+        "infinity_stock": false,
+        "sku": "HOM-1048",
+        "product_discount": 10,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 49,
+        "name": "Security Camera",
+        "category_name": "Home Appliances",
+        "category_id": 3,
+        "original_price": 1500000,
+        "stock": 25,
+        "infinity_stock": true,
+        "sku": "HOM-1049",
+        "product_discount": 0,
+        "variants": {
+            "options": [],
+            "extras": []
+        }
+    },
+    {
+        "id": 50,
+        "name": "Smartwatch",
+        "category_name": "Wearable",
+        "category_id": 5,
+        "original_price": 2000000,
+        "stock": 30,
+        "infinity_stock": true,
+        "sku": "WRB-1050",
+        "product_discount": 0,
+        "variants": {
+            "options": [
+                {
+                    "name": "Color",
+                    "type": "optional",
+                    "values": ["Black", "Silver"]
+                }
+            ],
+            "extras": []
+        }
+    }
+]

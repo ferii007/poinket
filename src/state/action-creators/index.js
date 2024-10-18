@@ -27,3 +27,13 @@ export const dataCategories = (flag) => {
         return flag;
     }
 }
+
+export const dataProducts = (flag) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'DATA_PRODUCTS',
+            payload: flag
+        })
+        return flag;
+    }
+}

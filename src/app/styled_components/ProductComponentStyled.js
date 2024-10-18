@@ -9,21 +9,8 @@ import {
 
 
 const ProductContainer = styled.div`
-    .container {
-        background-color: var(--third-color);
-        position: sticky;
-        top: 0;
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            border-bottom: 0.2rem solid rgba(0, 0, 0, 0.5);
-            border-radius: 0.5rem;
-            opacity: 0.5;
-        }
-    }
+    padding-top: 1rem;
+    
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
         
@@ -41,6 +28,22 @@ const ProductContainer = styled.div`
 `;
 
 const CategoriesContainer = styled.div`
+    background-color: var(--third-color);
+    position: sticky;
+    top: 0;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 0.2rem solid rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        opacity: 0.5;
+    }
+`;
+
+const CategoriesBox = styled.div`
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -86,5 +89,6 @@ const CategoriesMenu = styled.ul`
 export {
     ProductContainer,
     CategoriesContainer,
+    CategoriesBox,
     CategoriesMenu
 }
