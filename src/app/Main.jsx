@@ -20,7 +20,8 @@ const Main = () => {
     const dispatch = useDispatch();
     const {
         dataLogin,
-        dataFromLocalStorage
+        dataFromLocalStorage,
+        dataCategories
     } = bindActionCreators(actionCreators, dispatch);
 
     const [isContentLoaded, setIsContentLoaded] = useState(true);
@@ -57,6 +58,8 @@ const Main = () => {
     const handleDataCategories = async () => {
         try {
             const response = await axios.get('/dummyAPI/dataCategoriesAPI.json');
+
+            dataCategories(response.data);
 
             return response.data;
         } catch (error) {

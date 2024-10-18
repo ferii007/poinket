@@ -17,3 +17,13 @@ export const dataFromLocalStorage = (flag) => {
         return flag;
     }
 }
+
+export const dataCategories = (flag) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'DATA_CATEGORIES',
+            payload: flag
+        })
+        return flag;
+    }
+}
