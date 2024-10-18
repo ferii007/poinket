@@ -32,6 +32,7 @@ const HeaderMenuContainer = styled.div`
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
         top: 6.5rem;
         left: 0.5rem;
+        right: 0.5rem;
 
         .header-outlet-name {
             margin-bottom: 0.8rem;
@@ -47,6 +48,7 @@ const HeaderMenuContainer = styled.div`
     @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
         top: 6.5rem;
         left: 0.5rem;
+        right: 0.5rem;
 
         .header-outlet-name {
             margin-bottom: 0.8rem;

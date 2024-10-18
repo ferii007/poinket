@@ -178,7 +178,8 @@ const MainBox = styled.div`
 
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
-        left: 0;
+        left: 0.5rem;
+        right: 0.5rem;
         top: 12.5rem;
         bottom: 0;
     }
@@ -190,7 +191,8 @@ const MainBox = styled.div`
 
     /* Tablet Potrait */
     @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
-        left: 0;
+        left: 0.5rem;
+        right: 0.5rem;
         top: 12.5rem;
         bottom: 0;
     }
