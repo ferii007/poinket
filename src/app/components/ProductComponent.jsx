@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
+import useTranslationHook from './../tweaks/locales/index';
 
 import {
     CategoriesContainer,
@@ -20,6 +21,8 @@ import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import AllInclusiveOutlinedIcon from '@mui/icons-material/AllInclusiveOutlined';
 
 const ProductComponent = () => {
+    const { translations } = useTranslationHook();
+
     const dataCategories = useSelector((state) => state.dataCategories);
     const dataProducts = useSelector((state) => state.dataProducts);
 
@@ -85,7 +88,7 @@ const ProductComponent = () => {
                             className={`list-category ${activeCategory.categoryName === 'all' ? 'active-category' : ''}`}
                             onClick={() => handleChangeCategory('all')}
                         >
-                            All
+                            {translations.all}
                         </li>
 
                         {categoriesProduct?.length > 6 ? (
@@ -167,7 +170,7 @@ const ProductComponent = () => {
                                                         ) : product.stock > 0 ? (
                                                             <span className='stock-available'>{product.stock}</span>
                                                         ) : (
-                                                            <span className='stock-unavailable'>Out of stock</span>
+                                                            <span className='stock-unavailable'>{translations.out_of_stock}</span>
                                                         )}
                                                     </h3>
                                                 </div>

@@ -8,6 +8,8 @@ const resources = {
         error_save_settings: "Failed to update settings!",
         line_time: "Line time",
         local_time: "Local time",
+        all: "All",
+        out_of_stock: "Out of stock",
     },
     id: {
         products: "Produk",
@@ -18,6 +20,8 @@ const resources = {
         error_save_settings: "Gagal memperbarui pengaturan!",
         line_time: "Waktu operasional",
         local_time: "Waktu setempat",
+        all: "Semua",
+        out_of_stock: "Stok habis"
     },
 };
 
