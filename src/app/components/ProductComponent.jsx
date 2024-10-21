@@ -15,7 +15,11 @@ import {
 
 import {
     modalVariants
-} from './../tweaks/framerMotionVariants'
+} from './../tweaks/framerMotionVariants';
+
+import {
+    currencyFormatter
+} from './../tweaks/currency';
 
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import AllInclusiveOutlinedIcon from '@mui/icons-material/AllInclusiveOutlined';
@@ -23,6 +27,7 @@ import AllInclusiveOutlinedIcon from '@mui/icons-material/AllInclusiveOutlined';
 const ProductComponent = () => {
     const { translations } = useTranslationHook();
 
+    const dataLogin = useSelector((state) => state.dataLogin);
     const dataCategories = useSelector((state) => state.dataCategories);
     const dataProducts = useSelector((state) => state.dataProducts);
 
@@ -159,7 +164,11 @@ const ProductComponent = () => {
                                                     </h1>
 
                                                     <h3 className='product-price'>
-                                                        Rp. {product.original_price}
+                                                        {currencyFormatter(
+                                                            product.original_price,
+                                                            dataLogin.outlet_currency_code,
+                                                            dataLogin.outlet_location_code
+                                                        )}
                                                     </h3>
 
                                                     <h3 className='product-stock'>
