@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
 import useTranslationHook from './../tweaks/locales/index';
@@ -50,12 +50,11 @@ const ProductComponent = () => {
             categoryName: categoryName,
             categoryID: categoryID
         })
-
-        handleShowProducts(categoryName, categoryID);
     }
 
-    const handleShowProducts = (categoryName, categoryID) => {
+    const handleShowProducts =  useCallback((categoryName, categoryID) => {
         let filteredProducts = originalProducts;
+        console.log('categoryName', categoryName)
         
         if (categoryName !== 'all') {
             filteredProducts = originalProducts.filter(product => product.category_name === categoryName && product.category_id === categoryID);
@@ -64,7 +63,7 @@ const ProductComponent = () => {
         setLoadedImages(filteredProducts)
 
         setShowProducts(filteredProducts);
-    }
+    }, [originalProducts]);
 
     useEffect(() => {
         if (Array.isArray(dataCategories) && dataCategories.length !== 0) {
@@ -82,7 +81,7 @@ const ProductComponent = () => {
         if (originalProducts) {
             handleShowProducts(activeCategory.categoryName, activeCategory.categoryID);
         }
-    }, [originalProducts])
+    }, [originalProducts, activeCategory, handleShowProducts])
 
     return(
         <>
