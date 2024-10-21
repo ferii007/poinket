@@ -54,7 +54,6 @@ const ProductComponent = () => {
 
     const handleShowProducts =  useCallback((categoryName, categoryID) => {
         let filteredProducts = originalProducts;
-        console.log('categoryName', categoryName)
         
         if (categoryName !== 'all') {
             filteredProducts = originalProducts.filter(product => product.category_name === categoryName && product.category_id === categoryID);
