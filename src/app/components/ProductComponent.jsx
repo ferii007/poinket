@@ -133,8 +133,6 @@ const ProductComponent = () => {
 
             <ProductContainer>
                 <div>
-                    {/* <h1>Products</h1> */}
-
                     <ProductBox>
                         <AnimatePresence>
                             {showProducts.length > 0 ? (
