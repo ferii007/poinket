@@ -16,7 +16,7 @@ const SettingsInfoContainer = styled.div`
     padding-bottom: 1rem;
 
     .setting-outlet-icon {
-        background-color: red;
+        background-color: var(--third-color);
         border-radius: 50%;
         width: 5rem;
         height: 5rem;
