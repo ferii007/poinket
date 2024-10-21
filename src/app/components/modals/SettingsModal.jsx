@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from './../../../state';
@@ -108,19 +108,19 @@ const SettingsModal = ({ isVisible, toggleSettingsModal }) => {
         return language;
     }
     
-    const resetSettingsForm = () => {
+    const resetSettingsForm = useCallback(() => {
         const languageData = dataLocalStorage.languageData;
 
         setHighlightedLang(languageData.name);
         setHighlightedLangCode(languageData.lang_code);
         setIsLangOpen(false);
-    }
+    }, [dataLocalStorage]);
 
     useEffect(() => {
         if (isVisible === true) {
             resetSettingsForm();
         }
-    }, [isVisible])
+    }, [isVisible, resetSettingsForm])
 
     return ReactDOM.createPortal(
         <>
