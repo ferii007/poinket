@@ -205,9 +205,10 @@ const MainElement = styled.div`
     height: 100%;
     
     .container-1 {
-        overflow-y: scroll;
-        margin-top: 6.5rem;
-        padding-bottom: 1.5rem;
+        overflow: hidden;
+        position: relative;
+        // margin-top: 6.5rem;
+        // padding-bottom: 1.5rem;
 
         &::-webkit-scrollbar {
             display: none;

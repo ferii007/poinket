@@ -8,6 +8,18 @@ import {
 } from './globalStyled';
 
 
+const ProductComponentContainer = styled.div`
+    overflow-y: scroll;
+    margin-top: 6.5rem;
+    padding-bottom: 7.5rem;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+`;
+
 const ProductContainer = styled.div`
     padding-top: 1rem;
 
@@ -185,11 +197,27 @@ const CategoriesMenu = styled.ul`
     }
 `;
 
+const AllCategoriesContainer = styled.div`
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    inset: 8.5rem 0 0;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+`;
+
 export {
+    ProductComponentContainer,
     ProductContainer,
     CategoriesContainer,
     CategoriesBox,
     CategoriesMenu,
     ProductBox,
     ProductList,
+    AllCategoriesContainer,
 }
