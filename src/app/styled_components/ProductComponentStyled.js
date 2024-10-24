@@ -18,6 +18,23 @@ const ProductComponentContainer = styled.div`
         display: none;
     }
     scrollbar-width: none;
+
+    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
+    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        margin-top: 0;
+        padding-bottom: 1rem;
+    }
+
+    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
+    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
+
+    }
+
+    /* Tablet Potrait */
+    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        margin-top: 0;
+        padding-bottom: 1rem;
+    }
 `;
 
 const ProductContainer = styled.div`
@@ -43,6 +60,8 @@ const ProductBox = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
     
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
@@ -64,7 +83,7 @@ const ProductList = styled.div`
     background: white;
     flex: 0 0 auto;
     width: 100%;
-    width: 15rem;
+    width: 15.2rem;
     height: 20.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
@@ -122,12 +141,12 @@ const ProductList = styled.div`
 
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
-        
+        width: 11rem;
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-
+        width: 13rem;
     }
 
     /* Tablet Potrait */
@@ -209,6 +228,21 @@ const AllCategoriesContainer = styled.div`
         display: none;
     }
     scrollbar-width: none;
+
+    /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
+    @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
+        inset: 2rem 0;
+    }
+
+    /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
+    @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
+
+    }
+
+    /* Tablet Potrait */
+    @media only screen and (min-width: ${tabletResolutionMin}) and (max-width: ${tabletResolutionMax}) and (orientation: portrait) {
+        inset: 2.5rem 0;
+    }
 `;
 
 const AllCategoriesMenu = styled.ul `
