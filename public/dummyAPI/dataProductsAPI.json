@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Gaming Laptop with Advanced Features and High Performance Capabilities",
+        "name": "Laptop",
         "category_name": "Electronics",
         "category_id": 1,
         "original_price": 12500000,
@@ -24,11 +24,11 @@
             ],
             "extras": [
                 {
-                    "name": "Extended Warranty with Comprehensive Coverage and Dedicated Support",
+                    "name": "Extended Warranty",
                     "price": 1000000
                 },
                 {
-                    "name": "Laptop Bag with Multiple Compartments and Reinforced Padding",
+                    "name": "Laptop Bag",
                     "price": 300000
                 }
             ]
@@ -759,7 +759,7 @@
     },
     {
         "id": 39,
-        "name": "Gaming Laptop with Advanced Features and High Performance Capabilities",
+        "name": "Gaming Desk",
         "category_name": "Furniture",
         "category_id": 10,
         "original_price": 2000000,
