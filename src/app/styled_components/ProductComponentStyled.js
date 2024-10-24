@@ -80,11 +80,13 @@ const ProductBox = styled.div`
 `;
 
 const ProductList = styled.div`
+    position: relative;
     background: white;
     flex: 0 0 auto;
     width: 100%;
     height: 100%;
     min-width: 15rem;
+    max-width: 15rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     overflow: hidden;
@@ -126,6 +128,9 @@ const ProductList = styled.div`
         color: rgba(0, 0, 0, 0.5);
         display: flex;
         justify-content: end;
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
 
         .stock-available {
             background: var(--primary-color);
@@ -142,11 +147,13 @@ const ProductList = styled.div`
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
         min-width: 20rem;
+        max-width: 20rem;
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
         min-width: 12rem;
+        max-width: 12rem;
     }
 
     /* Tablet Potrait */
