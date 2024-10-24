@@ -60,17 +60,17 @@ const ProductBox = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
-        
+        justify-content: center;
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-
+        justify-content: center;
     }
 
     /* Tablet Potrait */
@@ -83,8 +83,8 @@ const ProductList = styled.div`
     background: white;
     flex: 0 0 auto;
     width: 100%;
-    width: 15.2rem;
-    height: 20.5rem;
+    height: 100%;
+    min-width: 15rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     overflow: hidden;
@@ -141,12 +141,12 @@ const ProductList = styled.div`
 
     /* Mobile Potrait (max-width: ${mobileResolutionPotrait}) */
     @media only screen and (max-width: ${mobileResolutionPotrait}) and (orientation: portrait) {
-        width: 11rem;
+        min-width: 20rem;
     }
 
     /* Mobile Landscape (max-width: ${mobileResolutionLandscape}) */
     @media only screen and (max-width: ${mobileResolutionLandscape}) and (orientation: landscape) {
-        width: 13rem;
+        min-width: 12rem;
     }
 
     /* Tablet Potrait */
