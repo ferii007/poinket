@@ -13,6 +13,7 @@ import {
     ProductBox,
     ProductList,
     AllCategoriesContainer,
+    AllCategoriesMenu
 } from '../styled_components/ProductComponentStyled';
 
 import {
@@ -218,7 +219,7 @@ const ProductComponent = () => {
 
             {isShowAllCategories && (
                 <AllCategoriesContainer>
-                    <ul>
+                    <AllCategoriesMenu>
                         {
                             categoriesProduct.map((category, index) => (
                                 <li 
@@ -230,7 +231,7 @@ const ProductComponent = () => {
                                 </li>
                             ))
                         }
-                    </ul>
+                    </AllCategoriesMenu>
                 </AllCategoriesContainer>
             )}
         </>

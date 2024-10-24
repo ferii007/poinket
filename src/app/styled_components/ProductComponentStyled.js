@@ -211,6 +211,28 @@ const AllCategoriesContainer = styled.div`
     scrollbar-width: none;
 `;
 
+const AllCategoriesMenu = styled.ul `
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+
+    li {
+        flex: 0 0 auto;
+        background: var(--primary-color);
+        color: white;
+        padding: 0.7rem 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+    }
+
+    li:hover {
+        transform: scale(1.05);
+    }
+`;
+
 export {
     ProductComponentContainer,
     ProductContainer,
@@ -220,4 +242,5 @@ export {
     ProductBox,
     ProductList,
     AllCategoriesContainer,
+    AllCategoriesMenu,
 }
